@@ -22,7 +22,7 @@
     "S3" : {
       "Type" : "AWS::S3::Bucket",
       "Properties" : {
-        "BucketName" : "wp-xxxxxx"
+        "BucketName" : "wp-btexpressb1"
       }
     }
   }
