@@ -1,0 +1,169 @@
+# Launch instances, runs some tasks
+# and then terminate them
+
+- name: Create a sandbox instance
+  hosts: localhost
+  connection: local     # VERY IMPORTANT, SCRIPT WON'T WORK CORRECTLY WITHOUT IT.
+  gather_facts: False
+
+  vars:
+    volumes:
+#     / (root) filesystem
+      - device_name:  /dev/sda1
+        volume_size:  17
+        delete_on_termination: True
+#     /var filesystem
+      - device_name:  /dev/sdb
+        volume_size:  3
+        delete_on_termination: True
+#     /home filesystem
+      - device_name:  /dev/sdc
+        volume_size:  5
+        delete_on_termination: True
+#     /export filesystem
+      - device_name:  /dev/sdd
+        volume_size:  40
+        delete_on_termination: True
+#     swap filesystem
+      - device_name:  /dev/sde
+        volume_type:  ephemeral
+        ephemeral: ephemeral0
+        delete_on_termination: True
+#     /boot filesystem
+#      - device_name:  /dev/sdg
+#        volume_size:  1
+#        delete_on_termination: True
+#    keypair: MyEC2KeyPairNVir
+#    instance_type: t2.micro
+#    security_group: ansible-webserver
+#    image: ami-b63769a1
+#    region: us-east-1
+#    count: 2
+
+  vars_prompt:
+    - name: "profile"
+      prompt: "Enter profile/account to be used:"
+      private: no
+#      default: bdpasigdocs
+      default: ienhance
+
+    - name: "keypair"
+      prompt: "Enter keypair:"
+      private: no
+#      default: MyEC2KeyPairNVir
+#      default: MyIenhanceKeyPair2
+      default: MySOEKeyPair
+
+    - name: "instance_type"
+      prompt: "Enter instance type:"
+      private: no
+#      default: t2.micro
+      default: m3.medium
+
+    - name: "security_group"
+      prompt: "Enter security group:"
+      private: no
+#      default: ansible-webserver
+      default: MyWebDMZ
+
+    - name: "image"
+      prompt: "Enter image/AMI to be used:"
+      private: no
+#      default: ami-b63769a1
+      default: ami-b63769a1
+
+    - name: "region"
+      prompt: "Enter region:"
+      private: no
+#      default: us-east-1
+      default: us-east-1
+
+    - name: "vpc_sn_id"
+      prompt: "Enter VPC subnet id:"
+      private: no
+#      default: subnet-63ebc515
+      default: subnet-67b7193f
+
+    - name: "count"
+      prompt: "Enter number of instances requested:"
+      private: no
+#      default: 1
+      default: 1
+
+  environment:
+    AWS_PROFILE:  "{{ profile }}"
+  
+  
+  tasks:
+    - name: Launch instance
+      ec2:
+         key_name: "{{ keypair }}"
+         group: "{{ security_group }}"
+         instance_type: "{{ instance_type }}"
+         image: "{{ image }}"
+         wait: true
+         region: "{{ region }}"
+         vpc_subnet_id: "{{ vpc_sn_id }}"
+         assign_public_ip: yes
+         count: "{{ count }}"
+         volumes: "{{ volumes }}"
+#         instance_profile_name: MyS3AdminAccess
+#        LINE BELOW WORKS!!!
+         user_data: "{{ lookup('file', '/home/wtooles/projects/ec2-centos7/ansible/install-sw') }}"
+      register: ec2
+
+    - name: Add new instance to host group
+      add_host:
+        hostname: "{{ item.public_ip }}"
+        groupname: launched
+      with_items: "{{ ec2.instances }}"
+
+    - name: Wait for SSH to come up
+      wait_for:
+        host: "{{ item.public_dns_name }}"
+        port: 22
+        delay: 60
+        timeout: 320
+        state: started
+      with_items: "{{ ec2.instances }}"
+
+    - name: Add tag to Instance(s)
+      local_action: ec2_tag resource={{ item.id }} region={{ region }} state=present
+      with_items: "{{ ec2.instances }}"
+      args:
+        tags:
+#          Name: "{{ item.public_dns_name }}"
+          Name: "{{ item.public_ip }}"
+          Env: test
+          Owner: wtooles@csc.com
+      register: tag
+
+    - name:  Get local directory
+      local_action: shell pwd
+      register: result
+
+    - name:  Empty output file
+      shell: "cat /dev/null >  {{ result.stdout }}/script.out"
+
+    - name:  Add Public IP and DNS name to the output file
+      shell: "echo New ec2 instance has a public ip of {{ item.public_ip }} and a public DNS name of {{ item.public_dns_name }} >> {{ result.stdout }}/script.out"
+      with_items: "{{ ec2.instances }}"
+
+
+
+#- name: Configure instance(s)
+#  hosts: launched
+#  become: True
+#  gather_facts: True
+#  roles:
+#    - my_awesome_role
+#    - my_awesome_test
+#
+#- name: Terminate instances
+#  hosts: localhost
+#  connection: local
+#  tasks:
+#    - name: Terminate instances that were previously launched
+#      ec2:
+#        state: 'absent'
+#        instance_ids: '{{ ec2.instance_ids }}'

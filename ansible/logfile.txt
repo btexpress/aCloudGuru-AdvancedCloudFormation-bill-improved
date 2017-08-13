@@ -1,0 +1,41 @@
+2017-08-13 18:54:15,253 p=5108 u=wtooles |   [WARNING]: Host file not found: ./hosts.txt
+
+2017-08-13 18:54:15,256 p=5108 u=wtooles |   [WARNING]: provided hosts list is empty, only localhost is available
+
+2017-08-13 18:54:15,280 p=5108 u=wtooles |  ERROR! 'cloudformation' is not a valid attribute for a Play
+
+The error appears to have been in '/media/sf_git-repos/aCloudGuru-AdvancedCloudFormation-bill/ansible/cf-test.yaml': line 1, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: launch ansible cloudformation example
+  ^ here
+
+2017-08-13 19:00:11,574 p=6320 u=wtooles |  ERROR! 'cloudformation' is not a valid attribute for a Play
+
+The error appears to have been in '/media/sf_git-repos/aCloudGuru-AdvancedCloudFormation-bill/ansible/cf-test.yaml': line 1, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: launch ansible cloudformation example
+  ^ here
+
+2017-08-13 19:10:28,351 p=6466 u=wtooles |  PLAY [Test Cloudformation Ansible Playbook] ***************************************************************
+2017-08-13 19:10:28,424 p=6466 u=wtooles |  TASK [launch ansible cloudformation example] **************************************************************
+2017-08-13 19:18:04,144 p=6466 u=wtooles |  changed: [localhost]
+2017-08-13 19:18:04,147 p=6466 u=wtooles |  PLAY RECAP ************************************************************************************************
+2017-08-13 19:18:04,147 p=6466 u=wtooles |  localhost                  : ok=1    changed=1    unreachable=0    failed=0   
+2017-08-13 19:22:28,696 p=6552 u=wtooles |  PLAY [Test Cloudformation Ansible Playbook] ***************************************************************
+2017-08-13 19:22:28,726 p=6552 u=wtooles |  TASK [launch ansible cloudformation example] **************************************************************
+2017-08-13 19:30:04,593 p=6552 u=wtooles |  changed: [localhost]
+2017-08-13 19:30:04,595 p=6552 u=wtooles |  PLAY RECAP ************************************************************************************************
+2017-08-13 19:30:04,595 p=6552 u=wtooles |  localhost                  : ok=1    changed=1    unreachable=0    failed=0   
+2017-08-13 19:37:24,067 p=6822 u=wtooles |  PLAY [Test Cloudformation Ansible Playbook] ***************************************************************
+2017-08-13 19:37:24,099 p=6822 u=wtooles |  TASK [launch ansible cloudformation example] **************************************************************
+2017-08-13 19:46:21,587 p=6822 u=wtooles |  changed: [localhost]
+2017-08-13 19:46:21,589 p=6822 u=wtooles |  PLAY RECAP ************************************************************************************************
+2017-08-13 19:46:21,589 p=6822 u=wtooles |  localhost                  : ok=1    changed=1    unreachable=0    failed=0   

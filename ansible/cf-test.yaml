@@ -1,0 +1,21 @@
+- name: Test Cloudformation Ansible Playbook
+  hosts: localhost
+  connection: local     # VERY IMPORTANT, SCRIPT WON'T WORK CORRECTLY WITHOUT IT.
+  gather_facts: False
+
+  tasks:
+    - name: launch ansible cloudformation example
+      cloudformation:
+        stack_name: "ansible-wp-infrastructure1"
+        state: "present"
+#        state: "absent"
+        region: "us-east-1"
+        disable_rollback: true
+        template: "cf_templates/101-OURFIRSTTEMPLATE/wp-infrastructure1.yaml"
+    #    template_parameters:
+    #      KeyName: "jmartin"
+    #      DiskType: "ephemeral"
+    #      InstanceType: "m1.small"
+    #      ClusterSize: 3
+        tags:
+          Stack: "ansible-wp-infrastructure1"
