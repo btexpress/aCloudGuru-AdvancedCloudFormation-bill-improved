@@ -216,3 +216,24 @@ The offending line appears to be:
 2017-08-14 18:10:10,732 p=10116 u=wtooles |  changed: [localhost]
 2017-08-14 18:10:10,734 p=10116 u=wtooles |  PLAY RECAP *************************************************************************************************************
 2017-08-14 18:10:10,734 p=10116 u=wtooles |  localhost                  : ok=1    changed=1    unreachable=0    failed=0   
+2017-08-14 18:30:10,823 p=12274 u=wtooles |   [ERROR]: User interrupted execution
+
+2017-08-14 18:34:25,594 p=12531 u=wtooles |   [ERROR]: User interrupted execution
+
+2017-08-14 18:34:35,514 p=12599 u=wtooles |  PLAY [Test Cloudformation Ansible Playbook] ****************************************************************************
+2017-08-14 18:34:35,546 p=12599 u=wtooles |  TASK [launch ansible cloudformation example] ***************************************************************************
+2017-08-14 18:34:36,454 p=12599 u=wtooles |  fatal: [localhost]: FAILED! => {"changed": false, "failed": true, "msg": "An error occurred (ValidationError) when calling the UpdateStack operation: Stack:arn:aws:cloudformation:us-east-1:570980316676:stack/OurPortableStack/175b9bf0-813c-11e7-8c3c-50d5ca6326ba is in DELETE_IN_PROGRESS state and can not be updated. An error occurred (ValidationError) when calling the UpdateStack operation: Stack:arn:aws:cloudformation:us-east-1:570980316676:stack/OurPortableStack/175b9bf0-813c-11e7-8c3c-50d5ca6326ba is in DELETE_IN_PROGRESS state and can not be updated. - <class 'botocore.exceptions.ClientError'>"}
+2017-08-14 18:34:36,458 p=12599 u=wtooles |  	to retry, use: --limit @/media/sf_git-repos/aCloudGuru-AdvancedCloudFormation-bill/ansible/cf-test103.retry
+
+2017-08-14 18:34:36,459 p=12599 u=wtooles |  PLAY RECAP *************************************************************************************************************
+2017-08-14 18:34:36,459 p=12599 u=wtooles |  localhost                  : ok=0    changed=0    unreachable=0    failed=1   
+2017-08-14 18:35:10,032 p=12743 u=wtooles |  PLAY [Test Cloudformation Ansible Playbook] ****************************************************************************
+2017-08-14 18:35:10,064 p=12743 u=wtooles |  TASK [launch ansible cloudformation example] ***************************************************************************
+2017-08-14 18:46:15,564 p=12743 u=wtooles |  changed: [localhost]
+2017-08-14 18:46:15,566 p=12743 u=wtooles |  PLAY RECAP *************************************************************************************************************
+2017-08-14 18:46:15,567 p=12743 u=wtooles |  localhost                  : ok=1    changed=1    unreachable=0    failed=0   
+2017-08-14 19:15:13,694 p=12843 u=wtooles |  PLAY [Test Cloudformation Ansible Playbook] ****************************************************************************
+2017-08-14 19:15:13,727 p=12843 u=wtooles |  TASK [launch ansible cloudformation example] ***************************************************************************
+2017-08-14 19:24:55,657 p=12843 u=wtooles |  changed: [localhost]
+2017-08-14 19:24:55,659 p=12843 u=wtooles |  PLAY RECAP *************************************************************************************************************
+2017-08-14 19:24:55,660 p=12843 u=wtooles |  localhost                  : ok=1    changed=1    unreachable=0    failed=0   

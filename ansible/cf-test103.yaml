@@ -24,6 +24,21 @@
       private: no
       default: OurPortableStack
 
+    - name: "databasename"
+      prompt: "Enter the database name:"
+      private: no
+      default: wordpress
+
+    - name: "databasepw"
+      prompt: "Enter the database password:"
+      private: yes
+      default: w0rdpr355
+
+    - name: "databaseuser"
+      prompt: "Enter the database user:"
+      private: no
+      default: wordpress
+
   tasks:
     - name: launch ansible cloudformation example
       cloudformation:
@@ -34,6 +49,9 @@
         template: "cf_templates/103-UserData Installing WordPress/wp-infrastructure3.yaml"
         template_parameters:
           EnvironmentSize : "{{ envsize }}"
+          DatabaseName : "{{ databasename }}"
+          DatabaseUser : "{{ databaseuser }}"
+          DatabasePassword : "{{ databasepw }}"
     #      KeyName: "jmartin"
     #      DiskType: "ephemeral"
     #      InstanceType: "m1.small"
