@@ -96,3 +96,13 @@ The offending line appears to be:
 2017-08-13 21:18:54,096 p=9285 u=wtooles |  changed: [localhost]
 2017-08-13 21:18:54,098 p=9285 u=wtooles |  PLAY RECAP ************************************************************************************************
 2017-08-13 21:18:54,100 p=9285 u=wtooles |  localhost                  : ok=1    changed=1    unreachable=0    failed=0   
+2017-08-13 23:39:00,246 p=14024 u=wtooles |  PLAY [Test Cloudformation Ansible Playbook] ***************************************************************
+2017-08-13 23:39:00,278 p=14024 u=wtooles |  TASK [launch ansible cloudformation example] **************************************************************
+2017-08-13 23:44:37,502 p=14024 u=wtooles |  changed: [localhost]
+2017-08-13 23:44:37,504 p=14024 u=wtooles |  PLAY RECAP ************************************************************************************************
+2017-08-13 23:44:37,504 p=14024 u=wtooles |  localhost                  : ok=1    changed=1    unreachable=0    failed=0   
+2017-08-13 23:45:37,933 p=14171 u=wtooles |  PLAY [Test Cloudformation Ansible Playbook] ***************************************************************
+2017-08-13 23:45:37,970 p=14171 u=wtooles |  TASK [launch ansible cloudformation example] **************************************************************
+2017-08-13 23:53:44,923 p=14171 u=wtooles |  changed: [localhost]
+2017-08-13 23:53:44,926 p=14171 u=wtooles |  PLAY RECAP ************************************************************************************************
+2017-08-13 23:53:44,926 p=14171 u=wtooles |  localhost                  : ok=1    changed=1    unreachable=0    failed=0   
