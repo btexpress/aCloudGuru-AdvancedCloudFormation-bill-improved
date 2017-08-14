@@ -3,12 +3,17 @@
   connection: local     # VERY IMPORTANT, SCRIPT WON'T WORK CORRECTLY WITHOUT IT.
   gather_facts: False
 
+  vars_prompt:
+    - name: "state"
+      prompt: "Enter state 'present' or 'absent' to be used:"
+      private: no
+      default: present
+
   tasks:
     - name: launch ansible cloudformation example
       cloudformation:
         stack_name: "ansible-wp-infrastructure1"
-        state: "present"
-#        state: "absent"
+        state: "{{ state }}"
         region: "us-east-1"
         disable_rollback: true
         template: "cf_templates/101-OURFIRSTTEMPLATE/wp-infrastructure1.yaml"
