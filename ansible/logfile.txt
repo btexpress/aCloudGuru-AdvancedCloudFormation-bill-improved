@@ -211,3 +211,8 @@ The offending line appears to be:
 2017-08-14 15:49:26,759 p=6138 u=wtooles |  changed: [localhost]
 2017-08-14 15:49:26,761 p=6138 u=wtooles |  PLAY RECAP *************************************************************************************************************
 2017-08-14 15:49:26,762 p=6138 u=wtooles |  localhost                  : ok=1    changed=1    unreachable=0    failed=0   
+2017-08-14 18:01:13,949 p=10116 u=wtooles |  PLAY [Test Cloudformation Ansible Playbook] ****************************************************************************
+2017-08-14 18:01:13,980 p=10116 u=wtooles |  TASK [launch ansible cloudformation example] ***************************************************************************
+2017-08-14 18:10:10,732 p=10116 u=wtooles |  changed: [localhost]
+2017-08-14 18:10:10,734 p=10116 u=wtooles |  PLAY RECAP *************************************************************************************************************
+2017-08-14 18:10:10,734 p=10116 u=wtooles |  localhost                  : ok=1    changed=1    unreachable=0    failed=0   

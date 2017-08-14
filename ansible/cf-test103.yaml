@@ -1,0 +1,42 @@
+- name: Test Cloudformation Ansible Playbook
+  hosts: localhost
+  connection: local     # VERY IMPORTANT, SCRIPT WON'T WORK CORRECTLY WITHOUT IT.
+  gather_facts: False
+
+  vars_prompt:
+    - name: "state"
+      prompt: "Enter state 'present' or 'absent' to be used:"
+      private: no
+      default: present
+
+    - name: "envsize"
+      prompt: "Enter Environment Size reqeusted -> 'SMALL', 'MEDIUM', or 'LARGE':"
+      private: no
+      default: SMALL
+
+    - name: "region"
+      prompt: "Enter region requested:"
+      private: no
+      default: us-east-1
+
+    - name: "stackname"
+      prompt: "Enter the name of the stack:"
+      private: no
+      default: OurPortableStack
+
+  tasks:
+    - name: launch ansible cloudformation example
+      cloudformation:
+        stack_name: "{{ stackname }}"
+        state: "{{ state }}"
+        region: "{{ region }}"
+        disable_rollback: true
+        template: "cf_templates/103-UserData Installing WordPress/wp-infrastructure3.yaml"
+        template_parameters:
+          EnvironmentSize : "{{ envsize }}"
+    #      KeyName: "jmartin"
+    #      DiskType: "ephemeral"
+    #      InstanceType: "m1.small"
+    #      ClusterSize: 3
+        tags:
+          Stack: "{{ stackname }}"
