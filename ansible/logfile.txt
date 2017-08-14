@@ -151,3 +151,63 @@ The offending line appears to be:
 2017-08-14 00:53:28,262 p=18356 u=wtooles |  changed: [localhost]
 2017-08-14 00:53:28,264 p=18356 u=wtooles |  PLAY RECAP **********************************************************************************************************
 2017-08-14 00:53:28,265 p=18356 u=wtooles |  localhost                  : ok=1    changed=1    unreachable=0    failed=0   
+2017-08-14 13:33:57,538 p=3791 u=wtooles |  PLAY [Test Cloudformation Ansible Playbook] ******************************************************************
+2017-08-14 13:33:57,618 p=3791 u=wtooles |  TASK [launch ansible cloudformation example] *****************************************************************
+2017-08-14 13:45:24,451 p=3791 u=wtooles |  changed: [localhost]
+2017-08-14 13:45:24,453 p=3791 u=wtooles |  PLAY RECAP ***************************************************************************************************
+2017-08-14 13:45:24,454 p=3791 u=wtooles |  localhost                  : ok=1    changed=1    unreachable=0    failed=0   
+2017-08-14 13:48:35,335 p=4006 u=wtooles |  PLAY [Test Cloudformation Ansible Playbook] ******************************************************************
+2017-08-14 13:48:35,367 p=4006 u=wtooles |  TASK [launch ansible cloudformation example] *****************************************************************
+2017-08-14 13:58:16,530 p=4006 u=wtooles |  changed: [localhost]
+2017-08-14 13:58:16,532 p=4006 u=wtooles |  PLAY RECAP ***************************************************************************************************
+2017-08-14 13:58:16,532 p=4006 u=wtooles |  localhost                  : ok=1    changed=1    unreachable=0    failed=0   
+2017-08-14 14:04:11,882 p=5005 u=wtooles |  PLAY [Test Cloudformation Ansible Playbook] ****************************************************************************
+2017-08-14 14:04:11,912 p=5005 u=wtooles |  TASK [launch ansible cloudformation example] ***************************************************************************
+2017-08-14 14:11:05,458 p=5005 u=wtooles |  changed: [localhost]
+2017-08-14 14:11:05,460 p=5005 u=wtooles |  PLAY RECAP *************************************************************************************************************
+2017-08-14 14:11:05,460 p=5005 u=wtooles |  localhost                  : ok=1    changed=1    unreachable=0    failed=0   
+2017-08-14 14:11:39,910 p=5090 u=wtooles |  PLAY [Test Cloudformation Ansible Playbook] ****************************************************************************
+2017-08-14 14:11:39,943 p=5090 u=wtooles |  TASK [launch ansible cloudformation example] ***************************************************************************
+2017-08-14 14:19:09,978 p=5090 u=wtooles |  changed: [localhost]
+2017-08-14 14:19:09,980 p=5090 u=wtooles |  PLAY RECAP *************************************************************************************************************
+2017-08-14 14:19:09,980 p=5090 u=wtooles |  localhost                  : ok=1    changed=1    unreachable=0    failed=0   
+2017-08-14 14:19:59,943 p=5175 u=wtooles |  PLAY [Test Cloudformation Ansible Playbook] ****************************************************************************
+2017-08-14 14:19:59,975 p=5175 u=wtooles |  TASK [launch ansible cloudformation example] ***************************************************************************
+2017-08-14 14:27:29,846 p=5175 u=wtooles |  changed: [localhost]
+2017-08-14 14:27:29,847 p=5175 u=wtooles |  PLAY RECAP *************************************************************************************************************
+2017-08-14 14:27:29,848 p=5175 u=wtooles |  localhost                  : ok=1    changed=1    unreachable=0    failed=0   
+2017-08-14 14:42:09,190 p=5282 u=wtooles |  PLAY [Test Cloudformation Ansible Playbook] ****************************************************************************
+2017-08-14 14:42:09,221 p=5282 u=wtooles |  TASK [launch ansible cloudformation example] ***************************************************************************
+2017-08-14 14:49:30,241 p=5282 u=wtooles |  changed: [localhost]
+2017-08-14 14:49:30,243 p=5282 u=wtooles |  PLAY RECAP *************************************************************************************************************
+2017-08-14 14:49:30,243 p=5282 u=wtooles |  localhost                  : ok=1    changed=1    unreachable=0    failed=0   
+2017-08-14 14:50:38,192 p=5698 u=wtooles |  PLAY [Test Cloudformation Ansible Playbook] ****************************************************************************
+2017-08-14 14:50:38,225 p=5698 u=wtooles |  TASK [launch ansible cloudformation example] ***************************************************************************
+2017-08-14 14:58:04,891 p=5698 u=wtooles |  changed: [localhost]
+2017-08-14 14:58:04,893 p=5698 u=wtooles |  PLAY RECAP *************************************************************************************************************
+2017-08-14 14:58:04,893 p=5698 u=wtooles |  localhost                  : ok=1    changed=1    unreachable=0    failed=0   
+2017-08-14 14:58:33,685 p=5782 u=wtooles |  PLAY [Test Cloudformation Ansible Playbook] ****************************************************************************
+2017-08-14 14:58:33,716 p=5782 u=wtooles |  TASK [launch ansible cloudformation example] ***************************************************************************
+2017-08-14 15:07:22,969 p=5782 u=wtooles |  changed: [localhost]
+2017-08-14 15:07:22,971 p=5782 u=wtooles |  PLAY RECAP *************************************************************************************************************
+2017-08-14 15:07:22,972 p=5782 u=wtooles |  localhost                  : ok=1    changed=1    unreachable=0    failed=0   
+2017-08-14 15:08:37,353 p=5881 u=wtooles |  PLAY [Test Cloudformation Ansible Playbook] ****************************************************************************
+2017-08-14 15:08:37,385 p=5881 u=wtooles |  TASK [launch ansible cloudformation example] ***************************************************************************
+2017-08-14 15:18:14,514 p=5881 u=wtooles |  changed: [localhost]
+2017-08-14 15:18:14,516 p=5881 u=wtooles |  PLAY RECAP *************************************************************************************************************
+2017-08-14 15:18:14,517 p=5881 u=wtooles |  localhost                  : ok=1    changed=1    unreachable=0    failed=0   
+2017-08-14 15:21:00,687 p=5967 u=wtooles |  PLAY [Test Cloudformation Ansible Playbook] ****************************************************************************
+2017-08-14 15:21:00,719 p=5967 u=wtooles |  TASK [launch ansible cloudformation example] ***************************************************************************
+2017-08-14 15:27:43,290 p=5967 u=wtooles |  changed: [localhost]
+2017-08-14 15:27:43,292 p=5967 u=wtooles |  PLAY RECAP *************************************************************************************************************
+2017-08-14 15:27:43,292 p=5967 u=wtooles |  localhost                  : ok=1    changed=1    unreachable=0    failed=0   
+2017-08-14 15:32:09,991 p=6052 u=wtooles |  PLAY [Test Cloudformation Ansible Playbook] ****************************************************************************
+2017-08-14 15:32:10,023 p=6052 u=wtooles |  TASK [launch ansible cloudformation example] ***************************************************************************
+2017-08-14 15:38:55,475 p=6052 u=wtooles |  changed: [localhost]
+2017-08-14 15:38:55,477 p=6052 u=wtooles |  PLAY RECAP *************************************************************************************************************
+2017-08-14 15:38:55,478 p=6052 u=wtooles |  localhost                  : ok=1    changed=1    unreachable=0    failed=0   
+2017-08-14 15:42:08,576 p=6138 u=wtooles |  PLAY [Test Cloudformation Ansible Playbook] ****************************************************************************
+2017-08-14 15:42:08,609 p=6138 u=wtooles |  TASK [launch ansible cloudformation example] ***************************************************************************
+2017-08-14 15:49:26,759 p=6138 u=wtooles |  changed: [localhost]
+2017-08-14 15:49:26,761 p=6138 u=wtooles |  PLAY RECAP *************************************************************************************************************
+2017-08-14 15:49:26,762 p=6138 u=wtooles |  localhost                  : ok=1    changed=1    unreachable=0    failed=0   

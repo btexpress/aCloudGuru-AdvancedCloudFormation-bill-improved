@@ -14,6 +14,11 @@
       private: no
       default: SMALL
 
+    - name: "region"
+      prompt: "Enter region requested:"
+      private: no
+      default: us-east-1
+
     - name: "stackname"
       prompt: "Enter the name of the stack:"
       private: no
@@ -24,7 +29,7 @@
       cloudformation:
         stack_name: "{{ stackname }}"
         state: "{{ state }}"
-        region: "us-east-1"
+        region: "{{ region }}"
         disable_rollback: true
         template: "cf_templates/102-TemplatePortability/wp-infrastructure2.yaml"
         template_parameters:
