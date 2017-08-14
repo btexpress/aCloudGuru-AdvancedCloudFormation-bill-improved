@@ -14,10 +14,15 @@
       private: no
       default: SMALL
 
+    - name: "stackname"
+      prompt: "Enter the name of the stack:"
+      private: no
+      default: OurPortableStack
+
   tasks:
     - name: launch ansible cloudformation example
       cloudformation:
-        stack_name: "ansible-wp-infrastructure2"
+        stack_name: "{{ stackname }}"
         state: "{{ state }}"
         region: "us-east-1"
         disable_rollback: true
@@ -29,4 +34,4 @@
     #      InstanceType: "m1.small"
     #      ClusterSize: 3
         tags:
-          Stack: "ansible-wp-infrastructure2"
+          Stack: "{{ stackname }}"
