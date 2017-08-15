@@ -54,7 +54,7 @@
         state: "{{ state }}"
         region: "{{ region }}"
         disable_rollback: true
-        template: "cf_templates/103-UserData Installing WordPress/wp-infrastructure3.yaml"
+        template: "cf_templates/103-UserData Installing WordPress/wp-infrastructure3-demo.yaml"
         template_parameters:
           EnvironmentSize : "{{ envsize }}"
           DatabaseName : "{{ databasename }}"
