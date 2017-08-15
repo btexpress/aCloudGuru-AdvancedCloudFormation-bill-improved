@@ -1,0 +1,15 @@
+# Launch instances, runs some tasks
+# and then terminate them
+
+- name: Create a sandbox instance
+  hosts: localhost
+  connection: local     # VERY IMPORTANT, SCRIPT WON'T WORK CORRECTLY WITHOUT IT.
+  gather_facts: False
+
+  tasks:
+    - debug: msg="{{ lookup('env','HOME') }} is an environment variable"
+    - debug: msg="{{ lookup('env','AWS_VPC_ID') }} is an environment variable"
+  
+    - name: Launch instance
+      ec2_group:
+        vpc_id: "{{ lookup('env','AWS_VPC_ID') }}"
