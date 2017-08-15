@@ -7,7 +7,7 @@
     - name: "profile"
       prompt: "Enter profile/account to be used:"
       private: no
-      default: wtoolesg
+      default: platformdxc
 
     - name: "state"
       prompt: "Enter state 'present' or 'absent' to be used:"

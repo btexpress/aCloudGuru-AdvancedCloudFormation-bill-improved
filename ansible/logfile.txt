@@ -300,3 +300,8 @@ The offending line appears to be:
 2017-08-15 00:50:27,085 p=25319 u=wtooles |  changed: [localhost]
 2017-08-15 00:50:27,087 p=25319 u=wtooles |  PLAY RECAP *************************************************************************************************************************
 2017-08-15 00:50:27,088 p=25319 u=wtooles |  localhost                  : ok=1    changed=1    unreachable=0    failed=0   
+2017-08-15 11:05:17,632 p=3857 u=wtooles |  PLAY [Test Cloudformation Ansible Playbook] ***************************************************************
+2017-08-15 11:05:17,708 p=3857 u=wtooles |  TASK [launch ansible cloudformation example] **************************************************************
+2017-08-15 11:16:17,862 p=3857 u=wtooles |  changed: [localhost]
+2017-08-15 11:16:17,865 p=3857 u=wtooles |  PLAY RECAP ************************************************************************************************
+2017-08-15 11:16:17,865 p=3857 u=wtooles |  localhost                  : ok=1    changed=1    unreachable=0    failed=0   
