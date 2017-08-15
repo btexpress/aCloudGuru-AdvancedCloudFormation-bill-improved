@@ -4,6 +4,11 @@
   gather_facts: False
 
   vars_prompt:
+    - name: "profile"
+      prompt: "Enter profile/account to be used:"
+      private: no
+      default: wtoolesg
+
     - name: "state"
       prompt: "Enter state 'present' or 'absent' to be used:"
       private: no
@@ -38,6 +43,9 @@
       prompt: "Enter the database user:"
       private: no
       default: wordpress
+
+  environment:
+    AWS_PROFILE:  "{{ profile }}"
 
   tasks:
     - name: launch ansible cloudformation example
