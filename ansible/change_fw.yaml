@@ -1,0 +1,61 @@
+- name: Test Cloudformation Ansible Playbook
+  hosts: localhost
+  connection: local     # VERY IMPORTANT, SCRIPT WON'T WORK CORRECTLY WITHOUT IT.
+  gather_facts: False
+
+  vars_prompt:
+    - name: "profile"
+      prompt: "Enter profile/account to be used:"
+      private: no
+      default: platformdxc
+
+    - name: "fw_action"
+      prompt: "Enable or disable access 'enable' or 'disable':"
+      private: no
+      default: enable
+
+    - name: "region"
+      prompt: "Enter region requested:"
+      private: no
+      default: us-east-1
+
+    - name: "myec2tag"
+      prompt: "Enter tag to search for:"
+      private: no
+      default: MyDemoEC2
+
+  environment:
+    AWS_PROFILE:  "{{ profile }}"
+
+  tasks:
+    - name: Get the instance id of the ec2 instance created
+      shell: aws ec2 describe-tags --profile {{ profile }} --region {{ region }} --output text --filters "Name=resource-type,Values=instance" | egrep {{ myec2tag }} | awk '{print $3}'
+      register: ec2_instance_id
+
+    - name: Get the public ip address of the ec2 instance created
+      shell: aws ec2 describe-instances --profile {{ profile }} --region {{ region }} --instance-ids {{ ec2_instance_id.stdout }} --output text | egrep INSTANCES | awk '{print $16}'
+      register: ip_address
+
+    - name: Get the public dns name of the ec2 instance created
+      shell: aws ec2 describe-instances --profile {{ profile }} --region {{ region }} --instance-ids {{ ec2_instance_id.stdout }} --output text | egrep INSTANCES | awk '{print $15}'
+      register: dns_name
+
+    - name: Get the private ip address of the ec2 instance created
+      shell: aws ec2 describe-instances --profile {{ profile }} --region {{ region }} --instance-ids {{ ec2_instance_id.stdout }} --output text | egrep INSTANCES | awk '{print $14}'
+      register: private_ip_address
+
+    - debug: msg="Created instance id is {{ ec2_instance_id.stdout }}"
+    - debug: msg="Public IP address is {{ ip_address.stdout }}"
+    - debug: msg="Public DNS name is {{ dns_name.stdout }}"
+    - debug: msg="Private IP address is {{ private_ip_address.stdout }}"
+    - debug: msg="ssh into the instance with one of the following:"
+    - debug: msg="ssh -i AdvancedCFN.pem ec2-user@{{ dns_name.stdout }}"
+    - debug: msg="ssh -i AdvancedCFN.pem ec2-user@{{ ip_address.stdout }}"
+
+    - name: "Enable access to the website"
+      shell: aws ec2 --profile {{ profile }} modify-instance-attribute --instance-id {{ ec2_instance_id.stdout }} --groups  sg-6dd34c1c  sg-3c845e4c
+      when: fw_action == "enable"
+
+    - name: "Disable access to the website"
+      shell: aws ec2 --profile {{ profile }} modify-instance-attribute --instance-id {{ ec2_instance_id.stdout }} --groups  sg-6dd34c1c
+      when: fw_action == "disable"
