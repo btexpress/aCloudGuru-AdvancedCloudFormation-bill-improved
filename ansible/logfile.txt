@@ -1322,3 +1322,905 @@ Should be written as:
 2017-08-15 20:06:38,122 p=31092 u=wtooles |  changed: [localhost]
 2017-08-15 20:06:38,124 p=31092 u=wtooles |  PLAY RECAP ************************************************************************************************************
 2017-08-15 20:06:38,125 p=31092 u=wtooles |  localhost                  : ok=12   changed=5    unreachable=0    failed=0   
+2017-08-15 20:25:49,415 p=1461 u=wtooles |  PLAY [Test Cloudformation Ansible Playbook] ***************************************************************************
+2017-08-15 20:25:49,448 p=1461 u=wtooles |  TASK [Get the instance id of the ec2 instance created] ****************************************************************
+2017-08-15 20:25:50,458 p=1461 u=wtooles |  changed: [localhost]
+2017-08-15 20:25:50,462 p=1461 u=wtooles |  TASK [Get the public ip address of the ec2 instance created] **********************************************************
+2017-08-15 20:25:51,275 p=1461 u=wtooles |  changed: [localhost]
+2017-08-15 20:25:51,279 p=1461 u=wtooles |  TASK [Get the public dns name of the ec2 instance created] ************************************************************
+2017-08-15 20:25:52,080 p=1461 u=wtooles |  changed: [localhost]
+2017-08-15 20:25:52,084 p=1461 u=wtooles |  TASK [Get the private ip address of the ec2 instance created] *********************************************************
+2017-08-15 20:25:52,917 p=1461 u=wtooles |  changed: [localhost]
+2017-08-15 20:25:52,922 p=1461 u=wtooles |  TASK [debug] **********************************************************************************************************
+2017-08-15 20:25:52,946 p=1461 u=wtooles |  ok: [localhost] => {
+    "msg": "Created instance id is i-0875ad14c252e3c98"
+}
+2017-08-15 20:25:52,950 p=1461 u=wtooles |  TASK [debug] **********************************************************************************************************
+2017-08-15 20:25:52,973 p=1461 u=wtooles |  ok: [localhost] => {
+    "msg": "Public IP address is 34.201.94.97"
+}
+2017-08-15 20:25:52,977 p=1461 u=wtooles |  TASK [debug] **********************************************************************************************************
+2017-08-15 20:25:53,000 p=1461 u=wtooles |  ok: [localhost] => {
+    "msg": "Public DNS name is ec2-34-201-94-97.compute-1.amazonaws.com"
+}
+2017-08-15 20:25:53,004 p=1461 u=wtooles |  TASK [debug] **********************************************************************************************************
+2017-08-15 20:25:53,027 p=1461 u=wtooles |  ok: [localhost] => {
+    "msg": "Private IP address is 172.31.17.82"
+}
+2017-08-15 20:25:53,032 p=1461 u=wtooles |  TASK [debug] **********************************************************************************************************
+2017-08-15 20:25:53,053 p=1461 u=wtooles |  ok: [localhost] => {
+    "msg": "ssh into the instance with one of the following:"
+}
+2017-08-15 20:25:53,057 p=1461 u=wtooles |  TASK [debug] **********************************************************************************************************
+2017-08-15 20:25:53,079 p=1461 u=wtooles |  ok: [localhost] => {
+    "msg": "ssh -i AdvancedCFN.pem ec2-user@ec2-34-201-94-97.compute-1.amazonaws.com"
+}
+2017-08-15 20:25:53,082 p=1461 u=wtooles |  TASK [debug] **********************************************************************************************************
+2017-08-15 20:25:53,104 p=1461 u=wtooles |  ok: [localhost] => {
+    "msg": "ssh -i AdvancedCFN.pem ec2-user@34.201.94.97"
+}
+2017-08-15 20:25:53,108 p=1461 u=wtooles |  TASK [Enable access to the website] ***********************************************************************************
+2017-08-15 20:25:53,124 p=1461 u=wtooles |  skipping: [localhost]
+2017-08-15 20:25:53,128 p=1461 u=wtooles |  TASK [Disable access to the website] **********************************************************************************
+2017-08-15 20:25:54,286 p=1461 u=wtooles |  changed: [localhost]
+2017-08-15 20:25:54,290 p=1461 u=wtooles |  PLAY RECAP ************************************************************************************************************
+2017-08-15 20:25:54,290 p=1461 u=wtooles |  localhost                  : ok=12   changed=5    unreachable=0    failed=0   
+2017-08-15 20:27:10,268 p=1626 u=wtooles |  PLAY [Test Cloudformation Ansible Playbook] ***************************************************************************
+2017-08-15 20:27:10,303 p=1626 u=wtooles |  TASK [Get the instance id of the ec2 instance created] ****************************************************************
+2017-08-15 20:27:11,293 p=1626 u=wtooles |  changed: [localhost]
+2017-08-15 20:27:11,296 p=1626 u=wtooles |  TASK [Get the public ip address of the ec2 instance created] **********************************************************
+2017-08-15 20:27:12,116 p=1626 u=wtooles |  changed: [localhost]
+2017-08-15 20:27:12,120 p=1626 u=wtooles |  TASK [Get the public dns name of the ec2 instance created] ************************************************************
+2017-08-15 20:27:12,951 p=1626 u=wtooles |  changed: [localhost]
+2017-08-15 20:27:12,955 p=1626 u=wtooles |  TASK [Get the private ip address of the ec2 instance created] *********************************************************
+2017-08-15 20:27:13,788 p=1626 u=wtooles |  changed: [localhost]
+2017-08-15 20:27:13,792 p=1626 u=wtooles |  TASK [debug] **********************************************************************************************************
+2017-08-15 20:27:13,817 p=1626 u=wtooles |  ok: [localhost] => {
+    "msg": "Created instance id is i-0875ad14c252e3c98"
+}
+2017-08-15 20:27:13,821 p=1626 u=wtooles |  TASK [debug] **********************************************************************************************************
+2017-08-15 20:27:13,844 p=1626 u=wtooles |  ok: [localhost] => {
+    "msg": "Public IP address is 34.201.94.97"
+}
+2017-08-15 20:27:13,848 p=1626 u=wtooles |  TASK [debug] **********************************************************************************************************
+2017-08-15 20:27:13,874 p=1626 u=wtooles |  ok: [localhost] => {
+    "msg": "Public DNS name is ec2-34-201-94-97.compute-1.amazonaws.com"
+}
+2017-08-15 20:27:13,878 p=1626 u=wtooles |  TASK [debug] **********************************************************************************************************
+2017-08-15 20:27:13,900 p=1626 u=wtooles |  ok: [localhost] => {
+    "msg": "Private IP address is 172.31.17.82"
+}
+2017-08-15 20:27:13,904 p=1626 u=wtooles |  TASK [debug] **********************************************************************************************************
+2017-08-15 20:27:13,925 p=1626 u=wtooles |  ok: [localhost] => {
+    "msg": "ssh into the instance with one of the following:"
+}
+2017-08-15 20:27:13,928 p=1626 u=wtooles |  TASK [debug] **********************************************************************************************************
+2017-08-15 20:27:13,951 p=1626 u=wtooles |  ok: [localhost] => {
+    "msg": "ssh -i AdvancedCFN.pem ec2-user@ec2-34-201-94-97.compute-1.amazonaws.com"
+}
+2017-08-15 20:27:13,955 p=1626 u=wtooles |  TASK [debug] **********************************************************************************************************
+2017-08-15 20:27:13,977 p=1626 u=wtooles |  ok: [localhost] => {
+    "msg": "ssh -i AdvancedCFN.pem ec2-user@34.201.94.97"
+}
+2017-08-15 20:27:13,980 p=1626 u=wtooles |  TASK [Enable access to the website] ***********************************************************************************
+2017-08-15 20:27:13,997 p=1626 u=wtooles |  skipping: [localhost]
+2017-08-15 20:27:14,003 p=1626 u=wtooles |  TASK [Disable access to the website] **********************************************************************************
+2017-08-15 20:27:15,087 p=1626 u=wtooles |  changed: [localhost]
+2017-08-15 20:27:15,089 p=1626 u=wtooles |  PLAY RECAP ************************************************************************************************************
+2017-08-15 20:27:15,090 p=1626 u=wtooles |  localhost                  : ok=12   changed=5    unreachable=0    failed=0   
+2017-08-15 20:27:50,330 p=1791 u=wtooles |  PLAY [Test Cloudformation Ansible Playbook] ***************************************************************************
+2017-08-15 20:27:50,376 p=1791 u=wtooles |  TASK [Get the instance id of the ec2 instance created] ****************************************************************
+2017-08-15 20:27:51,353 p=1791 u=wtooles |  changed: [localhost]
+2017-08-15 20:27:51,356 p=1791 u=wtooles |  TASK [Get the public ip address of the ec2 instance created] **********************************************************
+2017-08-15 20:27:52,199 p=1791 u=wtooles |  changed: [localhost]
+2017-08-15 20:27:52,204 p=1791 u=wtooles |  TASK [Get the public dns name of the ec2 instance created] ************************************************************
+2017-08-15 20:27:53,068 p=1791 u=wtooles |  changed: [localhost]
+2017-08-15 20:27:53,072 p=1791 u=wtooles |  TASK [Get the private ip address of the ec2 instance created] *********************************************************
+2017-08-15 20:27:53,928 p=1791 u=wtooles |  changed: [localhost]
+2017-08-15 20:27:53,933 p=1791 u=wtooles |  TASK [debug] **********************************************************************************************************
+2017-08-15 20:27:53,956 p=1791 u=wtooles |  ok: [localhost] => {
+    "msg": "Created instance id is i-0875ad14c252e3c98"
+}
+2017-08-15 20:27:53,960 p=1791 u=wtooles |  TASK [debug] **********************************************************************************************************
+2017-08-15 20:27:53,985 p=1791 u=wtooles |  ok: [localhost] => {
+    "msg": "Public IP address is 34.201.94.97"
+}
+2017-08-15 20:27:53,990 p=1791 u=wtooles |  TASK [debug] **********************************************************************************************************
+2017-08-15 20:27:54,015 p=1791 u=wtooles |  ok: [localhost] => {
+    "msg": "Public DNS name is ec2-34-201-94-97.compute-1.amazonaws.com"
+}
+2017-08-15 20:27:54,020 p=1791 u=wtooles |  TASK [debug] **********************************************************************************************************
+2017-08-15 20:27:54,041 p=1791 u=wtooles |  ok: [localhost] => {
+    "msg": "Private IP address is 172.31.17.82"
+}
+2017-08-15 20:27:54,045 p=1791 u=wtooles |  TASK [debug] **********************************************************************************************************
+2017-08-15 20:27:54,066 p=1791 u=wtooles |  ok: [localhost] => {
+    "msg": "ssh into the instance with one of the following:"
+}
+2017-08-15 20:27:54,070 p=1791 u=wtooles |  TASK [debug] **********************************************************************************************************
+2017-08-15 20:27:54,091 p=1791 u=wtooles |  ok: [localhost] => {
+    "msg": "ssh -i AdvancedCFN.pem ec2-user@ec2-34-201-94-97.compute-1.amazonaws.com"
+}
+2017-08-15 20:27:54,095 p=1791 u=wtooles |  TASK [debug] **********************************************************************************************************
+2017-08-15 20:27:54,117 p=1791 u=wtooles |  ok: [localhost] => {
+    "msg": "ssh -i AdvancedCFN.pem ec2-user@34.201.94.97"
+}
+2017-08-15 20:27:54,121 p=1791 u=wtooles |  TASK [Enable access to the website] ***********************************************************************************
+2017-08-15 20:27:55,320 p=1791 u=wtooles |  changed: [localhost]
+2017-08-15 20:27:55,324 p=1791 u=wtooles |  TASK [Disable access to the website] **********************************************************************************
+2017-08-15 20:27:55,341 p=1791 u=wtooles |  skipping: [localhost]
+2017-08-15 20:27:55,343 p=1791 u=wtooles |  PLAY RECAP ************************************************************************************************************
+2017-08-15 20:27:55,344 p=1791 u=wtooles |  localhost                  : ok=12   changed=5    unreachable=0    failed=0   
+2017-08-15 20:30:08,381 p=1957 u=wtooles |  PLAY [Test Cloudformation Ansible Playbook] ***************************************************************************
+2017-08-15 20:30:08,425 p=1957 u=wtooles |  TASK [Get the instance id of the ec2 instance created] ****************************************************************
+2017-08-15 20:30:09,430 p=1957 u=wtooles |  changed: [localhost]
+2017-08-15 20:30:09,433 p=1957 u=wtooles |  TASK [Get the public ip address of the ec2 instance created] **********************************************************
+2017-08-15 20:30:10,252 p=1957 u=wtooles |  changed: [localhost]
+2017-08-15 20:30:10,256 p=1957 u=wtooles |  TASK [Get the public dns name of the ec2 instance created] ************************************************************
+2017-08-15 20:30:11,074 p=1957 u=wtooles |  changed: [localhost]
+2017-08-15 20:30:11,078 p=1957 u=wtooles |  TASK [Get the private ip address of the ec2 instance created] *********************************************************
+2017-08-15 20:30:11,872 p=1957 u=wtooles |  changed: [localhost]
+2017-08-15 20:30:11,878 p=1957 u=wtooles |  TASK [debug] **********************************************************************************************************
+2017-08-15 20:30:11,901 p=1957 u=wtooles |  ok: [localhost] => {
+    "msg": "Created instance id is i-0875ad14c252e3c98"
+}
+2017-08-15 20:30:11,905 p=1957 u=wtooles |  TASK [debug] **********************************************************************************************************
+2017-08-15 20:30:11,928 p=1957 u=wtooles |  ok: [localhost] => {
+    "msg": "Public IP address is 34.201.94.97"
+}
+2017-08-15 20:30:11,932 p=1957 u=wtooles |  TASK [debug] **********************************************************************************************************
+2017-08-15 20:30:11,954 p=1957 u=wtooles |  ok: [localhost] => {
+    "msg": "Public DNS name is ec2-34-201-94-97.compute-1.amazonaws.com"
+}
+2017-08-15 20:30:11,958 p=1957 u=wtooles |  TASK [debug] **********************************************************************************************************
+2017-08-15 20:30:11,979 p=1957 u=wtooles |  ok: [localhost] => {
+    "msg": "Private IP address is 172.31.17.82"
+}
+2017-08-15 20:30:11,983 p=1957 u=wtooles |  TASK [debug] **********************************************************************************************************
+2017-08-15 20:30:12,003 p=1957 u=wtooles |  ok: [localhost] => {
+    "msg": "ssh into the instance with one of the following:"
+}
+2017-08-15 20:30:12,007 p=1957 u=wtooles |  TASK [debug] **********************************************************************************************************
+2017-08-15 20:30:12,029 p=1957 u=wtooles |  ok: [localhost] => {
+    "msg": "ssh -i AdvancedCFN.pem ec2-user@ec2-34-201-94-97.compute-1.amazonaws.com"
+}
+2017-08-15 20:30:12,033 p=1957 u=wtooles |  TASK [debug] **********************************************************************************************************
+2017-08-15 20:30:12,054 p=1957 u=wtooles |  ok: [localhost] => {
+    "msg": "ssh -i AdvancedCFN.pem ec2-user@34.201.94.97"
+}
+2017-08-15 20:30:12,058 p=1957 u=wtooles |  TASK [Enable access to the website] ***********************************************************************************
+2017-08-15 20:30:13,032 p=1957 u=wtooles |  changed: [localhost]
+2017-08-15 20:30:13,036 p=1957 u=wtooles |  TASK [Disable access to the website] **********************************************************************************
+2017-08-15 20:30:13,054 p=1957 u=wtooles |  skipping: [localhost]
+2017-08-15 20:30:13,056 p=1957 u=wtooles |  PLAY RECAP ************************************************************************************************************
+2017-08-15 20:30:13,057 p=1957 u=wtooles |  localhost                  : ok=12   changed=5    unreachable=0    failed=0   
+2017-08-15 20:31:16,975 p=2123 u=wtooles |  PLAY [Test Cloudformation Ansible Playbook] ***************************************************************************
+2017-08-15 20:31:17,007 p=2123 u=wtooles |  TASK [Get the instance id of the ec2 instance created] ****************************************************************
+2017-08-15 20:31:17,990 p=2123 u=wtooles |  changed: [localhost]
+2017-08-15 20:31:17,994 p=2123 u=wtooles |  TASK [Get the public ip address of the ec2 instance created] **********************************************************
+2017-08-15 20:31:18,777 p=2123 u=wtooles |  changed: [localhost]
+2017-08-15 20:31:18,781 p=2123 u=wtooles |  TASK [Get the public dns name of the ec2 instance created] ************************************************************
+2017-08-15 20:31:19,607 p=2123 u=wtooles |  changed: [localhost]
+2017-08-15 20:31:19,611 p=2123 u=wtooles |  TASK [Get the private ip address of the ec2 instance created] *********************************************************
+2017-08-15 20:31:20,678 p=2123 u=wtooles |  changed: [localhost]
+2017-08-15 20:31:20,683 p=2123 u=wtooles |  TASK [debug] **********************************************************************************************************
+2017-08-15 20:31:20,707 p=2123 u=wtooles |  ok: [localhost] => {
+    "msg": "Created instance id is i-0875ad14c252e3c98"
+}
+2017-08-15 20:31:20,712 p=2123 u=wtooles |  TASK [debug] **********************************************************************************************************
+2017-08-15 20:31:20,736 p=2123 u=wtooles |  ok: [localhost] => {
+    "msg": "Public IP address is 34.201.94.97"
+}
+2017-08-15 20:31:20,739 p=2123 u=wtooles |  TASK [debug] **********************************************************************************************************
+2017-08-15 20:31:20,761 p=2123 u=wtooles |  ok: [localhost] => {
+    "msg": "Public DNS name is ec2-34-201-94-97.compute-1.amazonaws.com"
+}
+2017-08-15 20:31:20,765 p=2123 u=wtooles |  TASK [debug] **********************************************************************************************************
+2017-08-15 20:31:20,785 p=2123 u=wtooles |  ok: [localhost] => {
+    "msg": "Private IP address is 172.31.17.82"
+}
+2017-08-15 20:31:20,789 p=2123 u=wtooles |  TASK [debug] **********************************************************************************************************
+2017-08-15 20:31:20,809 p=2123 u=wtooles |  ok: [localhost] => {
+    "msg": "ssh into the instance with one of the following:"
+}
+2017-08-15 20:31:20,813 p=2123 u=wtooles |  TASK [debug] **********************************************************************************************************
+2017-08-15 20:31:20,834 p=2123 u=wtooles |  ok: [localhost] => {
+    "msg": "ssh -i AdvancedCFN.pem ec2-user@ec2-34-201-94-97.compute-1.amazonaws.com"
+}
+2017-08-15 20:31:20,837 p=2123 u=wtooles |  TASK [debug] **********************************************************************************************************
+2017-08-15 20:31:20,859 p=2123 u=wtooles |  ok: [localhost] => {
+    "msg": "ssh -i AdvancedCFN.pem ec2-user@34.201.94.97"
+}
+2017-08-15 20:31:20,863 p=2123 u=wtooles |  TASK [Enable access to the website] ***********************************************************************************
+2017-08-15 20:31:20,880 p=2123 u=wtooles |  skipping: [localhost]
+2017-08-15 20:31:20,883 p=2123 u=wtooles |  TASK [Disable access to the website] **********************************************************************************
+2017-08-15 20:31:21,874 p=2123 u=wtooles |  changed: [localhost]
+2017-08-15 20:31:21,876 p=2123 u=wtooles |  PLAY RECAP ************************************************************************************************************
+2017-08-15 20:31:21,877 p=2123 u=wtooles |  localhost                  : ok=12   changed=5    unreachable=0    failed=0   
+2017-08-15 20:32:46,712 p=2291 u=wtooles |  PLAY [Test Cloudformation Ansible Playbook] ***************************************************************************
+2017-08-15 20:32:46,751 p=2291 u=wtooles |  TASK [Get the instance id of the ec2 instance created] ****************************************************************
+2017-08-15 20:32:47,677 p=2291 u=wtooles |  changed: [localhost]
+2017-08-15 20:32:47,682 p=2291 u=wtooles |  TASK [Get the public ip address of the ec2 instance created] **********************************************************
+2017-08-15 20:32:48,586 p=2291 u=wtooles |  changed: [localhost]
+2017-08-15 20:32:48,590 p=2291 u=wtooles |  TASK [Get the public dns name of the ec2 instance created] ************************************************************
+2017-08-15 20:32:49,418 p=2291 u=wtooles |  changed: [localhost]
+2017-08-15 20:32:49,422 p=2291 u=wtooles |  TASK [Get the private ip address of the ec2 instance created] *********************************************************
+2017-08-15 20:32:50,626 p=2291 u=wtooles |  changed: [localhost]
+2017-08-15 20:32:50,630 p=2291 u=wtooles |  TASK [debug] **********************************************************************************************************
+2017-08-15 20:32:50,660 p=2291 u=wtooles |  ok: [localhost] => {
+    "msg": "Created instance id is i-0875ad14c252e3c98"
+}
+2017-08-15 20:32:50,666 p=2291 u=wtooles |  TASK [debug] **********************************************************************************************************
+2017-08-15 20:32:50,688 p=2291 u=wtooles |  ok: [localhost] => {
+    "msg": "Public IP address is 34.201.94.97"
+}
+2017-08-15 20:32:50,691 p=2291 u=wtooles |  TASK [debug] **********************************************************************************************************
+2017-08-15 20:32:50,714 p=2291 u=wtooles |  ok: [localhost] => {
+    "msg": "Public DNS name is ec2-34-201-94-97.compute-1.amazonaws.com"
+}
+2017-08-15 20:32:50,717 p=2291 u=wtooles |  TASK [debug] **********************************************************************************************************
+2017-08-15 20:32:50,739 p=2291 u=wtooles |  ok: [localhost] => {
+    "msg": "Private IP address is 172.31.17.82"
+}
+2017-08-15 20:32:50,743 p=2291 u=wtooles |  TASK [debug] **********************************************************************************************************
+2017-08-15 20:32:50,765 p=2291 u=wtooles |  ok: [localhost] => {
+    "msg": "ssh into the instance with one of the following:"
+}
+2017-08-15 20:32:50,768 p=2291 u=wtooles |  TASK [debug] **********************************************************************************************************
+2017-08-15 20:32:50,796 p=2291 u=wtooles |  ok: [localhost] => {
+    "msg": "ssh -i AdvancedCFN.pem ec2-user@ec2-34-201-94-97.compute-1.amazonaws.com"
+}
+2017-08-15 20:32:50,801 p=2291 u=wtooles |  TASK [debug] **********************************************************************************************************
+2017-08-15 20:32:50,834 p=2291 u=wtooles |  ok: [localhost] => {
+    "msg": "ssh -i AdvancedCFN.pem ec2-user@34.201.94.97"
+}
+2017-08-15 20:32:50,838 p=2291 u=wtooles |  TASK [Enable access to the website] ***********************************************************************************
+2017-08-15 20:32:50,855 p=2291 u=wtooles |  skipping: [localhost]
+2017-08-15 20:32:50,860 p=2291 u=wtooles |  TASK [Disable access to the website] **********************************************************************************
+2017-08-15 20:32:52,085 p=2291 u=wtooles |  changed: [localhost]
+2017-08-15 20:32:52,088 p=2291 u=wtooles |  PLAY RECAP ************************************************************************************************************
+2017-08-15 20:32:52,089 p=2291 u=wtooles |  localhost                  : ok=12   changed=5    unreachable=0    failed=0   
+2017-08-15 20:33:25,435 p=2467 u=wtooles |  PLAY [Test Cloudformation Ansible Playbook] ***************************************************************************
+2017-08-15 20:33:25,468 p=2467 u=wtooles |  TASK [Get the instance id of the ec2 instance created] ****************************************************************
+2017-08-15 20:33:26,359 p=2467 u=wtooles |  changed: [localhost]
+2017-08-15 20:33:26,363 p=2467 u=wtooles |  TASK [Get the public ip address of the ec2 instance created] **********************************************************
+2017-08-15 20:33:27,174 p=2467 u=wtooles |  changed: [localhost]
+2017-08-15 20:33:27,177 p=2467 u=wtooles |  TASK [Get the public dns name of the ec2 instance created] ************************************************************
+2017-08-15 20:33:27,987 p=2467 u=wtooles |  changed: [localhost]
+2017-08-15 20:33:27,991 p=2467 u=wtooles |  TASK [Get the private ip address of the ec2 instance created] *********************************************************
+2017-08-15 20:33:28,805 p=2467 u=wtooles |  changed: [localhost]
+2017-08-15 20:33:28,810 p=2467 u=wtooles |  TASK [debug] **********************************************************************************************************
+2017-08-15 20:33:28,836 p=2467 u=wtooles |  ok: [localhost] => {
+    "msg": "Created instance id is i-0875ad14c252e3c98"
+}
+2017-08-15 20:33:28,839 p=2467 u=wtooles |  TASK [debug] **********************************************************************************************************
+2017-08-15 20:33:28,864 p=2467 u=wtooles |  ok: [localhost] => {
+    "msg": "Public IP address is 34.201.94.97"
+}
+2017-08-15 20:33:28,868 p=2467 u=wtooles |  TASK [debug] **********************************************************************************************************
+2017-08-15 20:33:28,892 p=2467 u=wtooles |  ok: [localhost] => {
+    "msg": "Public DNS name is ec2-34-201-94-97.compute-1.amazonaws.com"
+}
+2017-08-15 20:33:28,896 p=2467 u=wtooles |  TASK [debug] **********************************************************************************************************
+2017-08-15 20:33:28,919 p=2467 u=wtooles |  ok: [localhost] => {
+    "msg": "Private IP address is 172.31.17.82"
+}
+2017-08-15 20:33:28,923 p=2467 u=wtooles |  TASK [debug] **********************************************************************************************************
+2017-08-15 20:33:28,947 p=2467 u=wtooles |  ok: [localhost] => {
+    "msg": "ssh into the instance with one of the following:"
+}
+2017-08-15 20:33:28,951 p=2467 u=wtooles |  TASK [debug] **********************************************************************************************************
+2017-08-15 20:33:28,974 p=2467 u=wtooles |  ok: [localhost] => {
+    "msg": "ssh -i AdvancedCFN.pem ec2-user@ec2-34-201-94-97.compute-1.amazonaws.com"
+}
+2017-08-15 20:33:28,978 p=2467 u=wtooles |  TASK [debug] **********************************************************************************************************
+2017-08-15 20:33:29,003 p=2467 u=wtooles |  ok: [localhost] => {
+    "msg": "ssh -i AdvancedCFN.pem ec2-user@34.201.94.97"
+}
+2017-08-15 20:33:29,007 p=2467 u=wtooles |  TASK [Enable access to the website] ***********************************************************************************
+2017-08-15 20:33:30,086 p=2467 u=wtooles |  changed: [localhost]
+2017-08-15 20:33:30,090 p=2467 u=wtooles |  TASK [Disable access to the website] **********************************************************************************
+2017-08-15 20:33:30,107 p=2467 u=wtooles |  skipping: [localhost]
+2017-08-15 20:33:30,109 p=2467 u=wtooles |  PLAY RECAP ************************************************************************************************************
+2017-08-15 20:33:30,110 p=2467 u=wtooles |  localhost                  : ok=12   changed=5    unreachable=0    failed=0   
+2017-08-16 09:26:42,645 p=3346 u=wtooles |  PLAY [Test Cloudformation Ansible Playbook] *********************************************************************
+2017-08-16 09:26:42,718 p=3346 u=wtooles |  TASK [launch ansible cloudformation example] ********************************************************************
+2017-08-16 09:34:02,288 p=3346 u=wtooles |  changed: [localhost]
+2017-08-16 09:34:02,290 p=3346 u=wtooles |  PLAY RECAP ******************************************************************************************************
+2017-08-16 09:34:02,291 p=3346 u=wtooles |  localhost                  : ok=1    changed=1    unreachable=0    failed=0   
+2017-08-16 09:35:15,463 p=3521 u=wtooles |  PLAY [Test Cloudformation Ansible Playbook] *********************************************************************
+2017-08-16 09:35:15,492 p=3521 u=wtooles |  TASK [Get the instance id of the ec2 instance created] **********************************************************
+2017-08-16 09:35:16,686 p=3521 u=wtooles |  changed: [localhost]
+2017-08-16 09:35:16,689 p=3521 u=wtooles |  TASK [Get the public ip address of the ec2 instance created] ****************************************************
+2017-08-16 09:35:17,480 p=3521 u=wtooles |  changed: [localhost]
+2017-08-16 09:35:17,483 p=3521 u=wtooles |  TASK [Get the public dns name of the ec2 instance created] ******************************************************
+2017-08-16 09:35:18,249 p=3521 u=wtooles |  changed: [localhost]
+2017-08-16 09:35:18,252 p=3521 u=wtooles |  TASK [Get the private ip address of the ec2 instance created] ***************************************************
+2017-08-16 09:35:19,027 p=3521 u=wtooles |  changed: [localhost]
+2017-08-16 09:35:19,032 p=3521 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 09:35:19,056 p=3521 u=wtooles |  ok: [localhost] => {
+    "msg": "Created instance id is i-014a71addfa8543e5"
+}
+2017-08-16 09:35:19,060 p=3521 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 09:35:19,084 p=3521 u=wtooles |  ok: [localhost] => {
+    "msg": "Public IP address is 34.229.154.14"
+}
+2017-08-16 09:35:19,089 p=3521 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 09:35:19,120 p=3521 u=wtooles |  ok: [localhost] => {
+    "msg": "Public DNS name is ec2-34-229-154-14.compute-1.amazonaws.com"
+}
+2017-08-16 09:35:19,126 p=3521 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 09:35:19,149 p=3521 u=wtooles |  ok: [localhost] => {
+    "msg": "Private IP address is 172.31.25.5"
+}
+2017-08-16 09:35:19,153 p=3521 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 09:35:19,174 p=3521 u=wtooles |  ok: [localhost] => {
+    "msg": "ssh into the instance with one of the following:"
+}
+2017-08-16 09:35:19,178 p=3521 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 09:35:19,199 p=3521 u=wtooles |  ok: [localhost] => {
+    "msg": "ssh -i AdvancedCFN.pem ec2-user@ec2-34-229-154-14.compute-1.amazonaws.com"
+}
+2017-08-16 09:35:19,204 p=3521 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 09:35:19,227 p=3521 u=wtooles |  ok: [localhost] => {
+    "msg": "ssh -i AdvancedCFN.pem ec2-user@34.229.154.14"
+}
+2017-08-16 09:35:19,231 p=3521 u=wtooles |  TASK [Enable access to the website] *****************************************************************************
+2017-08-16 09:35:20,364 p=3521 u=wtooles |  changed: [localhost]
+2017-08-16 09:35:20,368 p=3521 u=wtooles |  TASK [Disable access to the website] ****************************************************************************
+2017-08-16 09:35:20,385 p=3521 u=wtooles |  skipping: [localhost]
+2017-08-16 09:35:20,387 p=3521 u=wtooles |  PLAY RECAP ******************************************************************************************************
+2017-08-16 09:35:20,388 p=3521 u=wtooles |  localhost                  : ok=12   changed=5    unreachable=0    failed=0   
+2017-08-16 09:37:44,357 p=3693 u=wtooles |  PLAY [Test Cloudformation Ansible Playbook] *********************************************************************
+2017-08-16 09:37:44,389 p=3693 u=wtooles |  TASK [Get the instance id of the ec2 instance created] **********************************************************
+2017-08-16 09:37:45,288 p=3693 u=wtooles |  changed: [localhost]
+2017-08-16 09:37:45,292 p=3693 u=wtooles |  TASK [Get the public ip address of the ec2 instance created] ****************************************************
+2017-08-16 09:37:46,061 p=3693 u=wtooles |  changed: [localhost]
+2017-08-16 09:37:46,065 p=3693 u=wtooles |  TASK [Get the public dns name of the ec2 instance created] ******************************************************
+2017-08-16 09:37:46,856 p=3693 u=wtooles |  changed: [localhost]
+2017-08-16 09:37:46,860 p=3693 u=wtooles |  TASK [Get the private ip address of the ec2 instance created] ***************************************************
+2017-08-16 09:37:47,649 p=3693 u=wtooles |  changed: [localhost]
+2017-08-16 09:37:47,653 p=3693 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 09:37:47,676 p=3693 u=wtooles |  ok: [localhost] => {
+    "msg": "Created instance id is i-014a71addfa8543e5"
+}
+2017-08-16 09:37:47,681 p=3693 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 09:37:47,705 p=3693 u=wtooles |  ok: [localhost] => {
+    "msg": "Public IP address is 34.229.154.14"
+}
+2017-08-16 09:37:47,709 p=3693 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 09:37:47,733 p=3693 u=wtooles |  ok: [localhost] => {
+    "msg": "Public DNS name is ec2-34-229-154-14.compute-1.amazonaws.com"
+}
+2017-08-16 09:37:47,736 p=3693 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 09:37:47,762 p=3693 u=wtooles |  ok: [localhost] => {
+    "msg": "Private IP address is 172.31.25.5"
+}
+2017-08-16 09:37:47,766 p=3693 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 09:37:47,789 p=3693 u=wtooles |  ok: [localhost] => {
+    "msg": "ssh into the instance with one of the following:"
+}
+2017-08-16 09:37:47,794 p=3693 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 09:37:47,817 p=3693 u=wtooles |  ok: [localhost] => {
+    "msg": "ssh -i AdvancedCFN.pem ec2-user@ec2-34-229-154-14.compute-1.amazonaws.com"
+}
+2017-08-16 09:37:47,820 p=3693 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 09:37:47,845 p=3693 u=wtooles |  ok: [localhost] => {
+    "msg": "ssh -i AdvancedCFN.pem ec2-user@34.229.154.14"
+}
+2017-08-16 09:37:47,849 p=3693 u=wtooles |  TASK [Enable access to the website] *****************************************************************************
+2017-08-16 09:37:48,945 p=3693 u=wtooles |  changed: [localhost]
+2017-08-16 09:37:48,949 p=3693 u=wtooles |  TASK [Disable access to the website] ****************************************************************************
+2017-08-16 09:37:48,966 p=3693 u=wtooles |  skipping: [localhost]
+2017-08-16 09:37:48,969 p=3693 u=wtooles |  PLAY RECAP ******************************************************************************************************
+2017-08-16 09:37:48,969 p=3693 u=wtooles |  localhost                  : ok=12   changed=5    unreachable=0    failed=0   
+2017-08-16 09:42:20,424 p=3931 u=wtooles |  PLAY [Test Cloudformation Ansible Playbook] *********************************************************************
+2017-08-16 09:42:20,455 p=3931 u=wtooles |  TASK [Get the instance id of the ec2 instance created] **********************************************************
+2017-08-16 09:42:21,434 p=3931 u=wtooles |  changed: [localhost]
+2017-08-16 09:42:21,438 p=3931 u=wtooles |  TASK [Get the public ip address of the ec2 instance created] ****************************************************
+2017-08-16 09:42:22,441 p=3931 u=wtooles |  changed: [localhost]
+2017-08-16 09:42:22,444 p=3931 u=wtooles |  TASK [Get the public dns name of the ec2 instance created] ******************************************************
+2017-08-16 09:42:23,354 p=3931 u=wtooles |  changed: [localhost]
+2017-08-16 09:42:23,357 p=3931 u=wtooles |  TASK [Get the private ip address of the ec2 instance created] ***************************************************
+2017-08-16 09:42:24,160 p=3931 u=wtooles |  changed: [localhost]
+2017-08-16 09:42:24,165 p=3931 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 09:42:24,189 p=3931 u=wtooles |  ok: [localhost] => {
+    "msg": "Created instance id is i-014a71addfa8543e5"
+}
+2017-08-16 09:42:24,192 p=3931 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 09:42:24,215 p=3931 u=wtooles |  ok: [localhost] => {
+    "msg": "Public IP address is 34.229.154.14"
+}
+2017-08-16 09:42:24,218 p=3931 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 09:42:24,240 p=3931 u=wtooles |  ok: [localhost] => {
+    "msg": "Public DNS name is ec2-34-229-154-14.compute-1.amazonaws.com"
+}
+2017-08-16 09:42:24,243 p=3931 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 09:42:24,265 p=3931 u=wtooles |  ok: [localhost] => {
+    "msg": "Private IP address is 172.31.25.5"
+}
+2017-08-16 09:42:24,269 p=3931 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 09:42:24,289 p=3931 u=wtooles |  ok: [localhost] => {
+    "msg": "ssh into the instance with one of the following:"
+}
+2017-08-16 09:42:24,292 p=3931 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 09:42:24,316 p=3931 u=wtooles |  ok: [localhost] => {
+    "msg": "ssh -i AdvancedCFN.pem ec2-user@ec2-34-229-154-14.compute-1.amazonaws.com"
+}
+2017-08-16 09:42:24,319 p=3931 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 09:42:24,342 p=3931 u=wtooles |  ok: [localhost] => {
+    "msg": "ssh -i AdvancedCFN.pem ec2-user@34.229.154.14"
+}
+2017-08-16 09:42:24,347 p=3931 u=wtooles |  TASK [Enable access to the website] *****************************************************************************
+2017-08-16 09:42:24,364 p=3931 u=wtooles |  skipping: [localhost]
+2017-08-16 09:42:24,367 p=3931 u=wtooles |  TASK [Disable access to the website] ****************************************************************************
+2017-08-16 09:42:25,588 p=3931 u=wtooles |  changed: [localhost]
+2017-08-16 09:42:25,590 p=3931 u=wtooles |  PLAY RECAP ******************************************************************************************************
+2017-08-16 09:42:25,591 p=3931 u=wtooles |  localhost                  : ok=12   changed=5    unreachable=0    failed=0   
+2017-08-16 09:45:15,139 p=4107 u=wtooles |  PLAY [Test Cloudformation Ansible Playbook] *********************************************************************
+2017-08-16 09:45:15,168 p=4107 u=wtooles |  TASK [Get the instance id of the ec2 instance created] **********************************************************
+2017-08-16 09:45:16,181 p=4107 u=wtooles |  changed: [localhost]
+2017-08-16 09:45:16,185 p=4107 u=wtooles |  TASK [Get the public ip address of the ec2 instance created] ****************************************************
+2017-08-16 09:45:17,291 p=4107 u=wtooles |  changed: [localhost]
+2017-08-16 09:45:17,295 p=4107 u=wtooles |  TASK [Get the public dns name of the ec2 instance created] ******************************************************
+2017-08-16 09:45:18,068 p=4107 u=wtooles |  changed: [localhost]
+2017-08-16 09:45:18,072 p=4107 u=wtooles |  TASK [Get the private ip address of the ec2 instance created] ***************************************************
+2017-08-16 09:45:18,913 p=4107 u=wtooles |  changed: [localhost]
+2017-08-16 09:45:18,918 p=4107 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 09:45:18,940 p=4107 u=wtooles |  ok: [localhost] => {
+    "msg": "Created instance id is i-014a71addfa8543e5"
+}
+2017-08-16 09:45:18,944 p=4107 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 09:45:18,966 p=4107 u=wtooles |  ok: [localhost] => {
+    "msg": "Public IP address is 34.229.154.14"
+}
+2017-08-16 09:45:18,970 p=4107 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 09:45:18,990 p=4107 u=wtooles |  ok: [localhost] => {
+    "msg": "Public DNS name is ec2-34-229-154-14.compute-1.amazonaws.com"
+}
+2017-08-16 09:45:18,994 p=4107 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 09:45:19,015 p=4107 u=wtooles |  ok: [localhost] => {
+    "msg": "Private IP address is 172.31.25.5"
+}
+2017-08-16 09:45:19,019 p=4107 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 09:45:19,039 p=4107 u=wtooles |  ok: [localhost] => {
+    "msg": "ssh into the instance with one of the following:"
+}
+2017-08-16 09:45:19,042 p=4107 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 09:45:19,063 p=4107 u=wtooles |  ok: [localhost] => {
+    "msg": "ssh -i AdvancedCFN.pem ec2-user@ec2-34-229-154-14.compute-1.amazonaws.com"
+}
+2017-08-16 09:45:19,067 p=4107 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 09:45:19,088 p=4107 u=wtooles |  ok: [localhost] => {
+    "msg": "ssh -i AdvancedCFN.pem ec2-user@34.229.154.14"
+}
+2017-08-16 09:45:19,092 p=4107 u=wtooles |  TASK [Enable access to the website] *****************************************************************************
+2017-08-16 09:45:19,113 p=4107 u=wtooles |  skipping: [localhost]
+2017-08-16 09:45:19,116 p=4107 u=wtooles |  TASK [Disable access to the website] ****************************************************************************
+2017-08-16 09:45:20,187 p=4107 u=wtooles |  changed: [localhost]
+2017-08-16 09:45:20,189 p=4107 u=wtooles |  PLAY RECAP ******************************************************************************************************
+2017-08-16 09:45:20,190 p=4107 u=wtooles |  localhost                  : ok=12   changed=5    unreachable=0    failed=0   
+2017-08-16 09:47:42,120 p=4276 u=wtooles |  PLAY [Test Cloudformation Ansible Playbook] *********************************************************************
+2017-08-16 09:47:42,152 p=4276 u=wtooles |  TASK [Get the instance id of the ec2 instance created] **********************************************************
+2017-08-16 09:47:43,111 p=4276 u=wtooles |  changed: [localhost]
+2017-08-16 09:47:43,115 p=4276 u=wtooles |  TASK [Get the public ip address of the ec2 instance created] ****************************************************
+2017-08-16 09:47:43,873 p=4276 u=wtooles |  changed: [localhost]
+2017-08-16 09:47:43,877 p=4276 u=wtooles |  TASK [Get the public dns name of the ec2 instance created] ******************************************************
+2017-08-16 09:47:44,745 p=4276 u=wtooles |  changed: [localhost]
+2017-08-16 09:47:44,748 p=4276 u=wtooles |  TASK [Get the private ip address of the ec2 instance created] ***************************************************
+2017-08-16 09:47:45,640 p=4276 u=wtooles |  changed: [localhost]
+2017-08-16 09:47:45,644 p=4276 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 09:47:45,668 p=4276 u=wtooles |  ok: [localhost] => {
+    "msg": "Created instance id is i-014a71addfa8543e5"
+}
+2017-08-16 09:47:45,673 p=4276 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 09:47:45,694 p=4276 u=wtooles |  ok: [localhost] => {
+    "msg": "Public IP address is 34.229.154.14"
+}
+2017-08-16 09:47:45,697 p=4276 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 09:47:45,718 p=4276 u=wtooles |  ok: [localhost] => {
+    "msg": "Public DNS name is ec2-34-229-154-14.compute-1.amazonaws.com"
+}
+2017-08-16 09:47:45,722 p=4276 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 09:47:45,743 p=4276 u=wtooles |  ok: [localhost] => {
+    "msg": "Private IP address is 172.31.25.5"
+}
+2017-08-16 09:47:45,746 p=4276 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 09:47:45,766 p=4276 u=wtooles |  ok: [localhost] => {
+    "msg": "ssh into the instance with one of the following:"
+}
+2017-08-16 09:47:45,770 p=4276 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 09:47:45,791 p=4276 u=wtooles |  ok: [localhost] => {
+    "msg": "ssh -i AdvancedCFN.pem ec2-user@ec2-34-229-154-14.compute-1.amazonaws.com"
+}
+2017-08-16 09:47:45,795 p=4276 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 09:47:45,816 p=4276 u=wtooles |  ok: [localhost] => {
+    "msg": "ssh -i AdvancedCFN.pem ec2-user@34.229.154.14"
+}
+2017-08-16 09:47:45,819 p=4276 u=wtooles |  TASK [Enable access to the website] *****************************************************************************
+2017-08-16 09:47:46,878 p=4276 u=wtooles |  changed: [localhost]
+2017-08-16 09:47:46,882 p=4276 u=wtooles |  TASK [Disable access to the website] ****************************************************************************
+2017-08-16 09:47:46,899 p=4276 u=wtooles |  skipping: [localhost]
+2017-08-16 09:47:46,901 p=4276 u=wtooles |  PLAY RECAP ******************************************************************************************************
+2017-08-16 09:47:46,901 p=4276 u=wtooles |  localhost                  : ok=12   changed=5    unreachable=0    failed=0   
+2017-08-16 09:51:44,838 p=4637 u=wtooles |  PLAY [Test Cloudformation Ansible Playbook] *********************************************************************
+2017-08-16 09:51:44,869 p=4637 u=wtooles |  TASK [Get the instance id of the ec2 instance created] **********************************************************
+2017-08-16 09:51:45,975 p=4637 u=wtooles |  changed: [localhost]
+2017-08-16 09:51:45,980 p=4637 u=wtooles |  TASK [Get the public ip address of the ec2 instance created] ****************************************************
+2017-08-16 09:51:46,754 p=4637 u=wtooles |  changed: [localhost]
+2017-08-16 09:51:46,758 p=4637 u=wtooles |  TASK [Get the public dns name of the ec2 instance created] ******************************************************
+2017-08-16 09:51:47,559 p=4637 u=wtooles |  changed: [localhost]
+2017-08-16 09:51:47,563 p=4637 u=wtooles |  TASK [Get the private ip address of the ec2 instance created] ***************************************************
+2017-08-16 09:51:48,321 p=4637 u=wtooles |  changed: [localhost]
+2017-08-16 09:51:48,326 p=4637 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 09:51:48,349 p=4637 u=wtooles |  ok: [localhost] => {
+    "msg": "Created instance id is i-014a71addfa8543e5"
+}
+2017-08-16 09:51:48,353 p=4637 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 09:51:48,374 p=4637 u=wtooles |  ok: [localhost] => {
+    "msg": "Public IP address is 34.229.154.14"
+}
+2017-08-16 09:51:48,377 p=4637 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 09:51:48,399 p=4637 u=wtooles |  ok: [localhost] => {
+    "msg": "Public DNS name is ec2-34-229-154-14.compute-1.amazonaws.com"
+}
+2017-08-16 09:51:48,403 p=4637 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 09:51:48,425 p=4637 u=wtooles |  ok: [localhost] => {
+    "msg": "Private IP address is 172.31.25.5"
+}
+2017-08-16 09:51:48,428 p=4637 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 09:51:48,450 p=4637 u=wtooles |  ok: [localhost] => {
+    "msg": "ssh into the instance with one of the following:"
+}
+2017-08-16 09:51:48,453 p=4637 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 09:51:48,474 p=4637 u=wtooles |  ok: [localhost] => {
+    "msg": "ssh -i AdvancedCFN.pem ec2-user@ec2-34-229-154-14.compute-1.amazonaws.com"
+}
+2017-08-16 09:51:48,478 p=4637 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 09:51:48,499 p=4637 u=wtooles |  ok: [localhost] => {
+    "msg": "ssh -i AdvancedCFN.pem ec2-user@34.229.154.14"
+}
+2017-08-16 09:51:48,503 p=4637 u=wtooles |  TASK [Enable access to the website] *****************************************************************************
+2017-08-16 09:51:48,521 p=4637 u=wtooles |  skipping: [localhost]
+2017-08-16 09:51:48,524 p=4637 u=wtooles |  TASK [Disable access to the website] ****************************************************************************
+2017-08-16 09:51:49,560 p=4637 u=wtooles |  changed: [localhost]
+2017-08-16 09:51:49,562 p=4637 u=wtooles |  PLAY RECAP ******************************************************************************************************
+2017-08-16 09:51:49,563 p=4637 u=wtooles |  localhost                  : ok=12   changed=5    unreachable=0    failed=0   
+2017-08-16 09:54:21,103 p=4806 u=wtooles |  PLAY [Test Cloudformation Ansible Playbook] *********************************************************************
+2017-08-16 09:54:21,138 p=4806 u=wtooles |  TASK [Get the instance id of the ec2 instance created] **********************************************************
+2017-08-16 09:54:22,123 p=4806 u=wtooles |  changed: [localhost]
+2017-08-16 09:54:22,127 p=4806 u=wtooles |  TASK [Get the public ip address of the ec2 instance created] ****************************************************
+2017-08-16 09:54:22,995 p=4806 u=wtooles |  changed: [localhost]
+2017-08-16 09:54:22,999 p=4806 u=wtooles |  TASK [Get the public dns name of the ec2 instance created] ******************************************************
+2017-08-16 09:54:23,864 p=4806 u=wtooles |  changed: [localhost]
+2017-08-16 09:54:23,868 p=4806 u=wtooles |  TASK [Get the private ip address of the ec2 instance created] ***************************************************
+2017-08-16 09:54:24,667 p=4806 u=wtooles |  changed: [localhost]
+2017-08-16 09:54:24,672 p=4806 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 09:54:24,693 p=4806 u=wtooles |  ok: [localhost] => {
+    "msg": "Created instance id is i-014a71addfa8543e5"
+}
+2017-08-16 09:54:24,696 p=4806 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 09:54:24,717 p=4806 u=wtooles |  ok: [localhost] => {
+    "msg": "Public IP address is 34.229.154.14"
+}
+2017-08-16 09:54:24,721 p=4806 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 09:54:24,742 p=4806 u=wtooles |  ok: [localhost] => {
+    "msg": "Public DNS name is ec2-34-229-154-14.compute-1.amazonaws.com"
+}
+2017-08-16 09:54:24,745 p=4806 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 09:54:24,767 p=4806 u=wtooles |  ok: [localhost] => {
+    "msg": "Private IP address is 172.31.25.5"
+}
+2017-08-16 09:54:24,771 p=4806 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 09:54:24,791 p=4806 u=wtooles |  ok: [localhost] => {
+    "msg": "ssh into the instance with one of the following:"
+}
+2017-08-16 09:54:24,795 p=4806 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 09:54:24,815 p=4806 u=wtooles |  ok: [localhost] => {
+    "msg": "ssh -i AdvancedCFN.pem ec2-user@ec2-34-229-154-14.compute-1.amazonaws.com"
+}
+2017-08-16 09:54:24,819 p=4806 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 09:54:24,839 p=4806 u=wtooles |  ok: [localhost] => {
+    "msg": "ssh -i AdvancedCFN.pem ec2-user@34.229.154.14"
+}
+2017-08-16 09:54:24,843 p=4806 u=wtooles |  TASK [Enable access to the website] *****************************************************************************
+2017-08-16 09:54:24,859 p=4806 u=wtooles |  skipping: [localhost]
+2017-08-16 09:54:24,862 p=4806 u=wtooles |  TASK [Disable access to the website] ****************************************************************************
+2017-08-16 09:54:26,132 p=4806 u=wtooles |  changed: [localhost]
+2017-08-16 09:54:26,134 p=4806 u=wtooles |  PLAY RECAP ******************************************************************************************************
+2017-08-16 09:54:26,135 p=4806 u=wtooles |  localhost                  : ok=12   changed=5    unreachable=0    failed=0   
+2017-08-16 09:56:25,394 p=5101 u=wtooles |  PLAY [Test Cloudformation Ansible Playbook] *********************************************************************
+2017-08-16 09:56:25,427 p=5101 u=wtooles |  TASK [Get the instance id of the ec2 instance created] **********************************************************
+2017-08-16 09:56:26,388 p=5101 u=wtooles |  changed: [localhost]
+2017-08-16 09:56:26,392 p=5101 u=wtooles |  TASK [Get the public ip address of the ec2 instance created] ****************************************************
+2017-08-16 09:56:27,225 p=5101 u=wtooles |  changed: [localhost]
+2017-08-16 09:56:27,229 p=5101 u=wtooles |  TASK [Get the public dns name of the ec2 instance created] ******************************************************
+2017-08-16 09:56:28,085 p=5101 u=wtooles |  changed: [localhost]
+2017-08-16 09:56:28,090 p=5101 u=wtooles |  TASK [Get the private ip address of the ec2 instance created] ***************************************************
+2017-08-16 09:56:28,876 p=5101 u=wtooles |  changed: [localhost]
+2017-08-16 09:56:28,879 p=5101 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 09:56:28,902 p=5101 u=wtooles |  ok: [localhost] => {
+    "msg": "Created instance id is i-014a71addfa8543e5"
+}
+2017-08-16 09:56:28,906 p=5101 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 09:56:28,928 p=5101 u=wtooles |  ok: [localhost] => {
+    "msg": "Public IP address is 34.229.154.14"
+}
+2017-08-16 09:56:28,931 p=5101 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 09:56:28,952 p=5101 u=wtooles |  ok: [localhost] => {
+    "msg": "Public DNS name is ec2-34-229-154-14.compute-1.amazonaws.com"
+}
+2017-08-16 09:56:28,955 p=5101 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 09:56:28,976 p=5101 u=wtooles |  ok: [localhost] => {
+    "msg": "Private IP address is 172.31.25.5"
+}
+2017-08-16 09:56:28,979 p=5101 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 09:56:28,999 p=5101 u=wtooles |  ok: [localhost] => {
+    "msg": "ssh into the instance with one of the following:"
+}
+2017-08-16 09:56:29,003 p=5101 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 09:56:29,023 p=5101 u=wtooles |  ok: [localhost] => {
+    "msg": "ssh -i AdvancedCFN.pem ec2-user@ec2-34-229-154-14.compute-1.amazonaws.com"
+}
+2017-08-16 09:56:29,027 p=5101 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 09:56:29,048 p=5101 u=wtooles |  ok: [localhost] => {
+    "msg": "ssh -i AdvancedCFN.pem ec2-user@34.229.154.14"
+}
+2017-08-16 09:56:29,052 p=5101 u=wtooles |  TASK [Enable access to the website] *****************************************************************************
+2017-08-16 09:56:30,243 p=5101 u=wtooles |  changed: [localhost]
+2017-08-16 09:56:30,247 p=5101 u=wtooles |  TASK [Disable access to the website] ****************************************************************************
+2017-08-16 09:56:30,263 p=5101 u=wtooles |  skipping: [localhost]
+2017-08-16 09:56:30,266 p=5101 u=wtooles |  PLAY RECAP ******************************************************************************************************
+2017-08-16 09:56:30,267 p=5101 u=wtooles |  localhost                  : ok=12   changed=5    unreachable=0    failed=0   
+2017-08-16 10:08:42,944 p=5480 u=wtooles |  PLAY [Test Cloudformation Ansible Playbook] *********************************************************************
+2017-08-16 10:08:42,975 p=5480 u=wtooles |  TASK [launch ansible cloudformation example] ********************************************************************
+2017-08-16 10:17:28,139 p=5480 u=wtooles |  changed: [localhost]
+2017-08-16 10:17:28,140 p=5480 u=wtooles |  PLAY RECAP ******************************************************************************************************
+2017-08-16 10:17:28,141 p=5480 u=wtooles |  localhost                  : ok=1    changed=1    unreachable=0    failed=0   
+2017-08-16 10:22:58,710 p=5566 u=wtooles |  PLAY [Test Cloudformation Ansible Playbook] *********************************************************************
+2017-08-16 10:22:58,741 p=5566 u=wtooles |  TASK [launch ansible cloudformation example] ********************************************************************
+2017-08-16 10:30:12,864 p=5566 u=wtooles |  changed: [localhost]
+2017-08-16 10:30:12,866 p=5566 u=wtooles |  PLAY RECAP ******************************************************************************************************
+2017-08-16 10:30:12,867 p=5566 u=wtooles |  localhost                  : ok=1    changed=1    unreachable=0    failed=0   
+2017-08-16 10:45:19,382 p=5652 u=wtooles |   [ERROR]: User interrupted execution
+
+2017-08-16 10:45:31,172 p=5720 u=wtooles |  PLAY [Test Cloudformation Ansible Playbook] *********************************************************************
+2017-08-16 10:45:31,204 p=5720 u=wtooles |  TASK [Get the instance id of the ec2 instance created] **********************************************************
+2017-08-16 10:45:32,185 p=5720 u=wtooles |  changed: [localhost]
+2017-08-16 10:45:32,189 p=5720 u=wtooles |  TASK [Get the public ip address of the ec2 instance created] ****************************************************
+2017-08-16 10:45:33,202 p=5720 u=wtooles |  changed: [localhost]
+2017-08-16 10:45:33,206 p=5720 u=wtooles |  TASK [Get the public dns name of the ec2 instance created] ******************************************************
+2017-08-16 10:45:34,009 p=5720 u=wtooles |  changed: [localhost]
+2017-08-16 10:45:34,013 p=5720 u=wtooles |  TASK [Get the private ip address of the ec2 instance created] ***************************************************
+2017-08-16 10:45:34,824 p=5720 u=wtooles |  changed: [localhost]
+2017-08-16 10:45:34,828 p=5720 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 10:45:34,851 p=5720 u=wtooles |  ok: [localhost] => {
+    "msg": "Created instance id is i-094120c82219288fb"
+}
+2017-08-16 10:45:34,854 p=5720 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 10:45:34,875 p=5720 u=wtooles |  ok: [localhost] => {
+    "msg": "Public IP address is 34.228.15.107"
+}
+2017-08-16 10:45:34,879 p=5720 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 10:45:34,899 p=5720 u=wtooles |  ok: [localhost] => {
+    "msg": "Public DNS name is ec2-34-228-15-107.compute-1.amazonaws.com"
+}
+2017-08-16 10:45:34,903 p=5720 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 10:45:34,927 p=5720 u=wtooles |  ok: [localhost] => {
+    "msg": "Private IP address is 172.31.0.237"
+}
+2017-08-16 10:45:34,931 p=5720 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 10:45:34,953 p=5720 u=wtooles |  ok: [localhost] => {
+    "msg": "ssh into the instance with one of the following:"
+}
+2017-08-16 10:45:34,956 p=5720 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 10:45:34,980 p=5720 u=wtooles |  ok: [localhost] => {
+    "msg": "ssh -i AdvancedCFN.pem ec2-user@ec2-34-228-15-107.compute-1.amazonaws.com"
+}
+2017-08-16 10:45:34,983 p=5720 u=wtooles |  TASK [debug] ****************************************************************************************************
+2017-08-16 10:45:35,009 p=5720 u=wtooles |  ok: [localhost] => {
+    "msg": "ssh -i AdvancedCFN.pem ec2-user@34.228.15.107"
+}
+2017-08-16 10:45:35,012 p=5720 u=wtooles |  TASK [Enable access to the website] *****************************************************************************
+2017-08-16 10:45:38,170 p=5720 u=wtooles |  fatal: [localhost]: FAILED! => {"changed": true, "cmd": "aws ec2 --profile wtoolesg modify-instance-attribute --instance-id i-094120c82219288fb --groups sg-6dd34c1c sg-3c845e4c", "delta": "0:00:03.021787", "end": "2017-08-16 10:45:38.156171", "failed": true, "rc": 255, "start": "2017-08-16 10:45:35.134384", "stderr": "\nAn error occurred (InvalidGroup.NotFound) when calling the ModifyInstanceAttribute operation: The security group 'sg-6dd34c1c' does not exist", "stderr_lines": ["", "An error occurred (InvalidGroup.NotFound) when calling the ModifyInstanceAttribute operation: The security group 'sg-6dd34c1c' does not exist"], "stdout": "", "stdout_lines": []}
+2017-08-16 10:45:38,174 p=5720 u=wtooles |  	to retry, use: --limit @/media/sf_git-repos/aCloudGuru-AdvancedCloudFormation-bill/ansible/change_fw.retry
+
+2017-08-16 10:45:38,175 p=5720 u=wtooles |  PLAY RECAP ******************************************************************************************************
+2017-08-16 10:45:38,175 p=5720 u=wtooles |  localhost                  : ok=11   changed=4    unreachable=0    failed=1   
+2017-08-16 10:46:26,189 p=5883 u=wtooles |  PLAY [Test Cloudformation Ansible Playbook] *********************************************************************
+2017-08-16 10:46:26,222 p=5883 u=wtooles |  TASK [launch ansible cloudformation example] ********************************************************************
+2017-08-16 10:55:41,905 p=5883 u=wtooles |  changed: [localhost]
+2017-08-16 10:55:41,908 p=5883 u=wtooles |  PLAY RECAP ******************************************************************************************************
+2017-08-16 10:55:41,909 p=5883 u=wtooles |  localhost                  : ok=1    changed=1    unreachable=0    failed=0   
+2017-08-16 11:02:46,680 p=5983 u=wtooles |  PLAY [Test Cloudformation Ansible Playbook] *********************************************************************
+2017-08-16 11:02:46,716 p=5983 u=wtooles |  TASK [launch ansible cloudformation example] ********************************************************************
+2017-08-16 11:14:03,245 p=5983 u=wtooles |  changed: [localhost]
+2017-08-16 11:14:03,247 p=5983 u=wtooles |  PLAY RECAP ******************************************************************************************************
+2017-08-16 11:14:03,248 p=5983 u=wtooles |  localhost                  : ok=1    changed=1    unreachable=0    failed=0   
+2017-08-17 15:44:11,823 p=3649 u=wtooles |  PLAY [Test Cloudformation Ansible Playbook] ************************************************************************
+2017-08-17 15:44:11,897 p=3649 u=wtooles |  TASK [launch ansible cloudformation example] ***********************************************************************
+2017-08-17 15:53:14,348 p=3649 u=wtooles |  changed: [localhost]
+2017-08-17 15:53:14,350 p=3649 u=wtooles |  PLAY RECAP *********************************************************************************************************
+2017-08-17 15:53:14,351 p=3649 u=wtooles |  localhost                  : ok=1    changed=1    unreachable=0    failed=0   
+2017-08-17 15:56:50,817 p=3797 u=wtooles |  PLAY [Test Cloudformation Ansible Playbook] ************************************************************************
+2017-08-17 15:56:50,850 p=3797 u=wtooles |  TASK [Get the instance id of the ec2 instance created] *************************************************************
+2017-08-17 15:56:52,049 p=3797 u=wtooles |  changed: [localhost]
+2017-08-17 15:56:52,053 p=3797 u=wtooles |  TASK [Get the public ip address of the ec2 instance created] *******************************************************
+2017-08-17 15:56:52,894 p=3797 u=wtooles |  changed: [localhost]
+2017-08-17 15:56:52,898 p=3797 u=wtooles |  TASK [Get the public dns name of the ec2 instance created] *********************************************************
+2017-08-17 15:56:53,752 p=3797 u=wtooles |  changed: [localhost]
+2017-08-17 15:56:53,756 p=3797 u=wtooles |  TASK [Get the private ip address of the ec2 instance created] ******************************************************
+2017-08-17 15:56:54,691 p=3797 u=wtooles |  changed: [localhost]
+2017-08-17 15:56:54,698 p=3797 u=wtooles |  TASK [debug] *******************************************************************************************************
+2017-08-17 15:56:54,723 p=3797 u=wtooles |  ok: [localhost] => {
+    "msg": "Created instance id is i-06225a72ac1047a3f"
+}
+2017-08-17 15:56:54,728 p=3797 u=wtooles |  TASK [debug] *******************************************************************************************************
+2017-08-17 15:56:54,752 p=3797 u=wtooles |  ok: [localhost] => {
+    "msg": "Public IP address is 204.236.203.249"
+}
+2017-08-17 15:56:54,755 p=3797 u=wtooles |  TASK [debug] *******************************************************************************************************
+2017-08-17 15:56:54,778 p=3797 u=wtooles |  ok: [localhost] => {
+    "msg": "Public DNS name is ec2-204-236-203-249.compute-1.amazonaws.com"
+}
+2017-08-17 15:56:54,784 p=3797 u=wtooles |  TASK [debug] *******************************************************************************************************
+2017-08-17 15:56:54,805 p=3797 u=wtooles |  ok: [localhost] => {
+    "msg": "Private IP address is 172.31.17.160"
+}
+2017-08-17 15:56:54,809 p=3797 u=wtooles |  TASK [debug] *******************************************************************************************************
+2017-08-17 15:56:54,834 p=3797 u=wtooles |  ok: [localhost] => {
+    "msg": "ssh into the instance with one of the following:"
+}
+2017-08-17 15:56:54,839 p=3797 u=wtooles |  TASK [debug] *******************************************************************************************************
+2017-08-17 15:56:54,866 p=3797 u=wtooles |  ok: [localhost] => {
+    "msg": "ssh -i AdvancedCFN.pem ec2-user@ec2-204-236-203-249.compute-1.amazonaws.com"
+}
+2017-08-17 15:56:54,870 p=3797 u=wtooles |  TASK [debug] *******************************************************************************************************
+2017-08-17 15:56:54,891 p=3797 u=wtooles |  ok: [localhost] => {
+    "msg": "ssh -i AdvancedCFN.pem ec2-user@204.236.203.249"
+}
+2017-08-17 15:56:54,896 p=3797 u=wtooles |  TASK [Enable access to the website] ********************************************************************************
+2017-08-17 15:56:54,914 p=3797 u=wtooles |  skipping: [localhost]
+2017-08-17 15:56:54,919 p=3797 u=wtooles |  TASK [Disable access to the website] *******************************************************************************
+2017-08-17 15:56:55,985 p=3797 u=wtooles |  changed: [localhost]
+2017-08-17 15:56:55,987 p=3797 u=wtooles |  PLAY RECAP *********************************************************************************************************
+2017-08-17 15:56:55,988 p=3797 u=wtooles |  localhost                  : ok=12   changed=5    unreachable=0    failed=0   
+2017-08-17 15:58:12,282 p=3962 u=wtooles |  PLAY [Test Cloudformation Ansible Playbook] ************************************************************************
+2017-08-17 15:58:12,317 p=3962 u=wtooles |  TASK [Get the instance id of the ec2 instance created] *************************************************************
+2017-08-17 15:58:13,371 p=3962 u=wtooles |  changed: [localhost]
+2017-08-17 15:58:13,375 p=3962 u=wtooles |  TASK [Get the public ip address of the ec2 instance created] *******************************************************
+2017-08-17 15:58:14,221 p=3962 u=wtooles |  changed: [localhost]
+2017-08-17 15:58:14,229 p=3962 u=wtooles |  TASK [Get the public dns name of the ec2 instance created] *********************************************************
+2017-08-17 15:58:15,103 p=3962 u=wtooles |  changed: [localhost]
+2017-08-17 15:58:15,108 p=3962 u=wtooles |  TASK [Get the private ip address of the ec2 instance created] ******************************************************
+2017-08-17 15:58:15,950 p=3962 u=wtooles |  changed: [localhost]
+2017-08-17 15:58:15,954 p=3962 u=wtooles |  TASK [debug] *******************************************************************************************************
+2017-08-17 15:58:15,979 p=3962 u=wtooles |  ok: [localhost] => {
+    "msg": "Created instance id is i-06225a72ac1047a3f"
+}
+2017-08-17 15:58:15,983 p=3962 u=wtooles |  TASK [debug] *******************************************************************************************************
+2017-08-17 15:58:16,008 p=3962 u=wtooles |  ok: [localhost] => {
+    "msg": "Public IP address is 204.236.203.249"
+}
+2017-08-17 15:58:16,013 p=3962 u=wtooles |  TASK [debug] *******************************************************************************************************
+2017-08-17 15:58:16,036 p=3962 u=wtooles |  ok: [localhost] => {
+    "msg": "Public DNS name is ec2-204-236-203-249.compute-1.amazonaws.com"
+}
+2017-08-17 15:58:16,040 p=3962 u=wtooles |  TASK [debug] *******************************************************************************************************
+2017-08-17 15:58:16,065 p=3962 u=wtooles |  ok: [localhost] => {
+    "msg": "Private IP address is 172.31.17.160"
+}
+2017-08-17 15:58:16,069 p=3962 u=wtooles |  TASK [debug] *******************************************************************************************************
+2017-08-17 15:58:16,098 p=3962 u=wtooles |  ok: [localhost] => {
+    "msg": "ssh into the instance with one of the following:"
+}
+2017-08-17 15:58:16,101 p=3962 u=wtooles |  TASK [debug] *******************************************************************************************************
+2017-08-17 15:58:16,126 p=3962 u=wtooles |  ok: [localhost] => {
+    "msg": "ssh -i AdvancedCFN.pem ec2-user@ec2-204-236-203-249.compute-1.amazonaws.com"
+}
+2017-08-17 15:58:16,131 p=3962 u=wtooles |  TASK [debug] *******************************************************************************************************
+2017-08-17 15:58:16,160 p=3962 u=wtooles |  ok: [localhost] => {
+    "msg": "ssh -i AdvancedCFN.pem ec2-user@204.236.203.249"
+}
+2017-08-17 15:58:16,165 p=3962 u=wtooles |  TASK [Enable access to the website] ********************************************************************************
+2017-08-17 15:58:17,199 p=3962 u=wtooles |  changed: [localhost]
+2017-08-17 15:58:17,203 p=3962 u=wtooles |  TASK [Disable access to the website] *******************************************************************************
+2017-08-17 15:58:17,223 p=3962 u=wtooles |  skipping: [localhost]
+2017-08-17 15:58:17,225 p=3962 u=wtooles |  PLAY RECAP *********************************************************************************************************
+2017-08-17 15:58:17,225 p=3962 u=wtooles |  localhost                  : ok=12   changed=5    unreachable=0    failed=0   
+2017-08-17 16:02:30,264 p=4141 u=wtooles |  PLAY [Test Cloudformation Ansible Playbook] ************************************************************************
+2017-08-17 16:02:30,309 p=4141 u=wtooles |  TASK [Get the instance id of the ec2 instance created] *************************************************************
+2017-08-17 16:02:31,358 p=4141 u=wtooles |  changed: [localhost]
+2017-08-17 16:02:31,362 p=4141 u=wtooles |  TASK [Get the public ip address of the ec2 instance created] *******************************************************
+2017-08-17 16:02:32,352 p=4141 u=wtooles |  changed: [localhost]
+2017-08-17 16:02:32,356 p=4141 u=wtooles |  TASK [Get the public dns name of the ec2 instance created] *********************************************************
+2017-08-17 16:02:33,267 p=4141 u=wtooles |  changed: [localhost]
+2017-08-17 16:02:33,271 p=4141 u=wtooles |  TASK [Get the private ip address of the ec2 instance created] ******************************************************
+2017-08-17 16:02:34,247 p=4141 u=wtooles |  changed: [localhost]
+2017-08-17 16:02:34,251 p=4141 u=wtooles |  TASK [debug] *******************************************************************************************************
+2017-08-17 16:02:34,274 p=4141 u=wtooles |  ok: [localhost] => {
+    "msg": "Created instance id is i-06225a72ac1047a3f"
+}
+2017-08-17 16:02:34,280 p=4141 u=wtooles |  TASK [debug] *******************************************************************************************************
+2017-08-17 16:02:34,307 p=4141 u=wtooles |  ok: [localhost] => {
+    "msg": "Public IP address is 204.236.203.249"
+}
+2017-08-17 16:02:34,313 p=4141 u=wtooles |  TASK [debug] *******************************************************************************************************
+2017-08-17 16:02:34,339 p=4141 u=wtooles |  ok: [localhost] => {
+    "msg": "Public DNS name is ec2-204-236-203-249.compute-1.amazonaws.com"
+}
+2017-08-17 16:02:34,344 p=4141 u=wtooles |  TASK [debug] *******************************************************************************************************
+2017-08-17 16:02:34,368 p=4141 u=wtooles |  ok: [localhost] => {
+    "msg": "Private IP address is 172.31.17.160"
+}
+2017-08-17 16:02:34,372 p=4141 u=wtooles |  TASK [debug] *******************************************************************************************************
+2017-08-17 16:02:34,395 p=4141 u=wtooles |  ok: [localhost] => {
+    "msg": "ssh into the instance with one of the following:"
+}
+2017-08-17 16:02:34,400 p=4141 u=wtooles |  TASK [debug] *******************************************************************************************************
+2017-08-17 16:02:34,422 p=4141 u=wtooles |  ok: [localhost] => {
+    "msg": "ssh -i AdvancedCFN.pem ec2-user@ec2-204-236-203-249.compute-1.amazonaws.com"
+}
+2017-08-17 16:02:34,426 p=4141 u=wtooles |  TASK [debug] *******************************************************************************************************
+2017-08-17 16:02:34,449 p=4141 u=wtooles |  ok: [localhost] => {
+    "msg": "ssh -i AdvancedCFN.pem ec2-user@204.236.203.249"
+}
+2017-08-17 16:02:34,453 p=4141 u=wtooles |  TASK [Enable access to the website] ********************************************************************************
+2017-08-17 16:02:34,471 p=4141 u=wtooles |  skipping: [localhost]
+2017-08-17 16:02:34,475 p=4141 u=wtooles |  TASK [Disable access to the website] *******************************************************************************
+2017-08-17 16:02:35,503 p=4141 u=wtooles |  changed: [localhost]
+2017-08-17 16:02:35,504 p=4141 u=wtooles |  PLAY RECAP *********************************************************************************************************
+2017-08-17 16:02:35,505 p=4141 u=wtooles |  localhost                  : ok=12   changed=5    unreachable=0    failed=0   
+2017-08-17 16:05:00,537 p=4306 u=wtooles |  PLAY [Test Cloudformation Ansible Playbook] ************************************************************************
+2017-08-17 16:05:00,575 p=4306 u=wtooles |  TASK [launch ansible cloudformation example] ***********************************************************************
+2017-08-17 16:15:25,624 p=4306 u=wtooles |  changed: [localhost]
+2017-08-17 16:15:25,627 p=4306 u=wtooles |  PLAY RECAP *********************************************************************************************************
+2017-08-17 16:15:25,628 p=4306 u=wtooles |  localhost                  : ok=1    changed=1    unreachable=0    failed=0   
+2017-08-18 08:55:22,314 p=3855 u=wtooles |  PLAY [Test Cloudformation Ansible Playbook] **********************************************************************
+2017-08-18 08:55:22,389 p=3855 u=wtooles |  TASK [launch ansible cloudformation example] *********************************************************************
+2017-08-18 08:55:24,009 p=3855 u=wtooles |  ok: [localhost]
+2017-08-18 08:55:24,011 p=3855 u=wtooles |  PLAY RECAP *******************************************************************************************************
+2017-08-18 08:55:24,011 p=3855 u=wtooles |  localhost                  : ok=1    changed=0    unreachable=0    failed=0   
+2017-08-18 08:55:51,159 p=4003 u=wtooles |  PLAY [Test Cloudformation Ansible Playbook] **********************************************************************
+2017-08-18 08:55:51,193 p=4003 u=wtooles |  TASK [Get the instance id of the ec2 instance created] ***********************************************************
+2017-08-18 08:55:52,345 p=4003 u=wtooles |  changed: [localhost]
+2017-08-18 08:55:52,349 p=4003 u=wtooles |  TASK [Get the public ip address of the ec2 instance created] *****************************************************
+2017-08-18 08:55:53,220 p=4003 u=wtooles |  changed: [localhost]
+2017-08-18 08:55:53,224 p=4003 u=wtooles |  TASK [Get the public dns name of the ec2 instance created] *******************************************************
+2017-08-18 08:55:54,250 p=4003 u=wtooles |  changed: [localhost]
+2017-08-18 08:55:54,254 p=4003 u=wtooles |  TASK [Get the private ip address of the ec2 instance created] ****************************************************
+2017-08-18 08:55:55,163 p=4003 u=wtooles |  changed: [localhost]
+2017-08-18 08:55:55,169 p=4003 u=wtooles |  TASK [debug] *****************************************************************************************************
+2017-08-18 08:55:55,193 p=4003 u=wtooles |  ok: [localhost] => {
+    "msg": "Created instance id is i-079f0c261ba9b6271"
+}
+2017-08-18 08:55:55,197 p=4003 u=wtooles |  TASK [debug] *****************************************************************************************************
+2017-08-18 08:55:55,224 p=4003 u=wtooles |  ok: [localhost] => {
+    "msg": "Public IP address is 34.229.17.20"
+}
+2017-08-18 08:55:55,229 p=4003 u=wtooles |  TASK [debug] *****************************************************************************************************
+2017-08-18 08:55:55,256 p=4003 u=wtooles |  ok: [localhost] => {
+    "msg": "Public DNS name is ec2-34-229-17-20.compute-1.amazonaws.com"
+}
+2017-08-18 08:55:55,261 p=4003 u=wtooles |  TASK [debug] *****************************************************************************************************
+2017-08-18 08:55:55,292 p=4003 u=wtooles |  ok: [localhost] => {
+    "msg": "Private IP address is 172.31.28.115"
+}
+2017-08-18 08:55:55,297 p=4003 u=wtooles |  TASK [debug] *****************************************************************************************************
+2017-08-18 08:55:55,319 p=4003 u=wtooles |  ok: [localhost] => {
+    "msg": "ssh into the instance with one of the following:"
+}
+2017-08-18 08:55:55,324 p=4003 u=wtooles |  TASK [debug] *****************************************************************************************************
+2017-08-18 08:55:55,346 p=4003 u=wtooles |  ok: [localhost] => {
+    "msg": "ssh -i AdvancedCFN.pem ec2-user@ec2-34-229-17-20.compute-1.amazonaws.com"
+}
+2017-08-18 08:55:55,349 p=4003 u=wtooles |  TASK [debug] *****************************************************************************************************
+2017-08-18 08:55:55,372 p=4003 u=wtooles |  ok: [localhost] => {
+    "msg": "ssh -i AdvancedCFN.pem ec2-user@34.229.17.20"
+}
+2017-08-18 08:55:55,376 p=4003 u=wtooles |  TASK [Enable access to the website] ******************************************************************************
+2017-08-18 08:55:56,674 p=4003 u=wtooles |  changed: [localhost]
+2017-08-18 08:55:56,679 p=4003 u=wtooles |  TASK [Disable access to the website] *****************************************************************************
+2017-08-18 08:55:56,697 p=4003 u=wtooles |  skipping: [localhost]
+2017-08-18 08:55:56,699 p=4003 u=wtooles |  PLAY RECAP *******************************************************************************************************
+2017-08-18 08:55:56,700 p=4003 u=wtooles |  localhost                  : ok=12   changed=5    unreachable=0    failed=0   
