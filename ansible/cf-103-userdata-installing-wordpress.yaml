@@ -1,0 +1,68 @@
+- name: Test Cloudformation Ansible Playbook
+  hosts: localhost
+  connection: local     # VERY IMPORTANT, SCRIPT WON'T WORK CORRECTLY WITHOUT IT.
+  gather_facts: False
+
+  vars_prompt:
+    - name: "profile"
+      prompt: "Enter profile/account to be used:"
+      private: no
+      default: training
+
+    - name: "state"
+      prompt: "Enter state 'present' or 'absent' to be used:"
+      private: no
+      default: present
+
+    - name: "envsize"
+      prompt: "Enter Environment Size reqeusted -> 'SMALL', 'MEDIUM', or 'LARGE':"
+      private: no
+      default: SMALL
+
+    - name: "region"
+      prompt: "Enter region requested:"
+      private: no
+      default: us-east-1
+
+    - name: "stackname"
+      prompt: "Enter the name of the stack:"
+      private: no
+      default: WordpressPortableStack
+
+    - name: "databasename"
+      prompt: "Enter the database name:"
+      private: no
+      default: wordpress
+
+    - name: "databasepw"
+      prompt: "Enter the database password:"
+      private: yes
+      default: w0rdpr355
+
+    - name: "databaseuser"
+      prompt: "Enter the database user:"
+      private: no
+      default: wordpress
+
+  environment:
+    AWS_PROFILE:  "{{ profile }}"
+
+  tasks:
+    - name: launch aws cloudformation template to create wordpress environment
+      cloudformation:
+        stack_name: "{{ stackname }}"
+        state: "{{ state }}"
+        region: "{{ region }}"
+        disable_rollback: true
+        template: "cf_templates/103-UserData_Installing_WordPress/wp-infrastructure3-demo.yaml"
+        template_parameters:
+          EnvironmentSize : "{{ envsize }}"
+          DatabaseName : "{{ databasename }}"
+          DatabaseUser : "{{ databaseuser }}"
+          DatabasePassword : "{{ databasepw }}"
+    #      KeyName: "jmartin"
+    #      DiskType: "ephemeral"
+    #      InstanceType: "m1.small"
+    #      ClusterSize: 3
+        tags:
+          Stack: "{{ stackname }}"
