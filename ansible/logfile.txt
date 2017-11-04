@@ -2886,3 +2886,23 @@ Should be written as:
 2017-10-22 08:21:23,606 p=6550 u=wtooles |  changed: [localhost]
 2017-10-22 08:21:23,610 p=6550 u=wtooles |  PLAY RECAP ******************************************************************************************************************************************
 2017-10-22 08:21:23,612 p=6550 u=wtooles |  localhost                  : ok=1    changed=1    unreachable=0    failed=0   
+2017-10-24 12:15:45,128 p=3065 u=wtooles |  PLAY [Test Cloudformation Ansible Playbook] ***************************************************************************************
+2017-10-24 12:15:45,201 p=3065 u=wtooles |  TASK [launch aws cloudformation template to create wordpress environment] *********************************************************
+2017-10-24 12:22:15,330 p=3065 u=wtooles |  changed: [localhost]
+2017-10-24 12:22:15,332 p=3065 u=wtooles |  PLAY RECAP ************************************************************************************************************************
+2017-10-24 12:22:15,333 p=3065 u=wtooles |  localhost                  : ok=1    changed=1    unreachable=0    failed=0   
+2017-10-24 15:00:43,376 p=5864 u=wtooles |  PLAY [Test Cloudformation Ansible Playbook] ***************************************************************************************
+2017-10-24 15:00:43,407 p=5864 u=wtooles |  TASK [launch aws cloudformation template to create wordpress environment] *********************************************************
+2017-10-24 15:09:14,906 p=5864 u=wtooles |  changed: [localhost]
+2017-10-24 15:09:14,908 p=5864 u=wtooles |  PLAY RECAP ************************************************************************************************************************
+2017-10-24 15:09:14,908 p=5864 u=wtooles |  localhost                  : ok=1    changed=1    unreachable=0    failed=0   
+2017-10-24 15:09:56,694 p=6147 u=wtooles |  PLAY [Test Cloudformation Ansible Playbook] ***************************************************************************************
+2017-10-24 15:09:56,725 p=6147 u=wtooles |  TASK [launch aws cloudformation template to create wordpress environment] *********************************************************
+2017-10-24 15:37:18,886 p=6147 u=wtooles |  changed: [localhost]
+2017-10-24 15:37:18,888 p=6147 u=wtooles |  PLAY RECAP ************************************************************************************************************************
+2017-10-24 15:37:18,888 p=6147 u=wtooles |  localhost                  : ok=1    changed=1    unreachable=0    failed=0   
+2017-10-24 16:56:33,403 p=7116 u=wtooles |  PLAY [Test Cloudformation Ansible Playbook] ***************************************************************************************
+2017-10-24 16:56:33,437 p=7116 u=wtooles |  TASK [launch aws cloudformation template to create wordpress environment] *********************************************************
+2017-10-24 17:03:46,870 p=7116 u=wtooles |  changed: [localhost]
+2017-10-24 17:03:46,873 p=7116 u=wtooles |  PLAY RECAP ************************************************************************************************************************
+2017-10-24 17:03:46,874 p=7116 u=wtooles |  localhost                  : ok=1    changed=1    unreachable=0    failed=0   
