@@ -3,8 +3,8 @@
   <script src="https://sdk.amazonaws.com/js/aws-sdk-2.6.10.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script type="text/javascript">
-    AWS.config.update({accessKeyId: 'SUPPORTAKID-CHANGEME', secretAccessKey: 'SUPPORTSECRET-CHANGEME'});
-    AWS.config.region = 'REGION-CHANGEME';
+    AWS.config.update({accessKeyId: 'AKIAJSQTUQLBAWBTJIJQ', secretAccessKey: '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'});
+    AWS.config.region = 'us-east-1';
   </script>
   <head>
     <link href='http://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
@@ -26,12 +26,12 @@
           var cloudformation = new AWS.CloudFormation();
           var param = {
             StackName: stackname,
-            RoleARN: 'STACK-ROLE-ARN-CHANGEME',
+            RoleARN: 'arn:aws:iam::057496144837:role/whistackrole-iamrole-RAEV4PF5LT7U',
             Parameters: [
               {ParameterKey: 'EnvironmentSize', ParameterValue: envsize, UsePreviousValue: false}
             ],
             OnFailure: 'DO_NOTHING',
-            TemplateURL: 'https://RESOURCEBUCKET-CHANGEME/wp.yaml'
+            TemplateURL: 'https://s3.amazonaws.com/whibuckets-resbucket-ry8e27amcelb/wp.yaml'
           };
           console.log(param)
           cloudformation.createStack(param, function(err,data){
