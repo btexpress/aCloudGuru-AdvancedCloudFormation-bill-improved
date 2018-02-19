@@ -2906,3 +2906,10 @@ Should be written as:
 2017-10-24 17:03:46,870 p=7116 u=wtooles |  changed: [localhost]
 2017-10-24 17:03:46,873 p=7116 u=wtooles |  PLAY RECAP ************************************************************************************************************************
 2017-10-24 17:03:46,874 p=7116 u=wtooles |  localhost                  : ok=1    changed=1    unreachable=0    failed=0   
+2018-02-19 01:23:23,753 p=3006 u=wtooles |  [DEPRECATION WARNING]: [defaults]hostfile option, The key is misleading as it can also be a list of hosts, a directory or a list of 
+paths . This feature will be removed in version 2.8. Deprecation warnings can be disabled by setting deprecation_warnings=False in 
+ansible.cfg.
+2018-02-19 01:23:42,147 p=3006 u=wtooles |   [ERROR]: User interrupted execution
+
+2018-02-19 01:25:56,895 p=3077 u=wtooles |   [ERROR]: User interrupted execution
+
