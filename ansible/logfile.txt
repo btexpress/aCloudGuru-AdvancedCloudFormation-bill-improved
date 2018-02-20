@@ -2913,3 +2913,25 @@ ansible.cfg.
 
 2018-02-19 01:25:56,895 p=3077 u=wtooles |   [ERROR]: User interrupted execution
 
+2018-02-19 01:30:42,799 p=4573 u=wtooles |  PLAY [Test Cloudformation Ansible Playbook] ******************************************************************************************
+2018-02-19 01:30:42,849 p=4573 u=wtooles |  TASK [launch ansible cloudformation example] *****************************************************************************************
+2018-02-19 01:37:34,285 p=4573 u=wtooles |  fatal: [localhost]: FAILED! => {"changed": true, "events": ["StackEvent AWS::CloudFormation::Stack OurPortableStack CREATE_FAILED", "StackEvent AWS::EC2::Instance EC2 CREATE_FAILED", "StackEvent AWS::EC2::Instance EC2 CREATE_IN_PROGRESS", "StackEvent AWS::RDS::DBInstance DB CREATE_COMPLETE", "StackEvent AWS::S3::Bucket S3 CREATE_COMPLETE", "StackEvent AWS::RDS::DBInstance DB CREATE_IN_PROGRESS", "StackEvent AWS::S3::Bucket S3 CREATE_IN_PROGRESS", "StackEvent AWS::S3::Bucket S3 CREATE_IN_PROGRESS", "StackEvent AWS::RDS::DBInstance DB CREATE_IN_PROGRESS", "StackEvent AWS::CloudFormation::Stack OurPortableStack CREATE_IN_PROGRESS"], "log": ["AWS::CloudFormation::Stack OurPortableStack CREATE_FAILED: The following resource(s) failed to create: [EC2]. ", "AWS::EC2::Instance EC2 CREATE_FAILED: The key pair 'MySOEKeyPair' does not exist"], "output": "Stack CREATE failed", "stack_outputs": {}, "stack_resources": [{"last_updated_time": "2018-02-19T06:37:29.181000+00:00", "logical_resource_id": "DB", "physical_resource_id": "ods5uqt9gvb7u1", "resource_type": "AWS::RDS::DBInstance", "status": "CREATE_COMPLETE", "status_reason": null}, {"last_updated_time": "2018-02-19T06:37:32.675000+00:00", "logical_resource_id": "EC2", "physical_resource_id": "", "resource_type": "AWS::EC2::Instance", "status": "CREATE_FAILED", "status_reason": "The key pair 'MySOEKeyPair' does not exist"}, {"last_updated_time": "2018-02-19T06:31:09.255000+00:00", "logical_resource_id": "S3", "physical_resource_id": "ourportablestack-s3-em9lv18ob065", "resource_type": "AWS::S3::Bucket", "status": "CREATE_COMPLETE", "status_reason": null}]}
+2018-02-19 01:37:34,289 p=4573 u=wtooles |  	to retry, use: --limit @/media/sf_git-repos/aCloudGuru-AdvancedCloudFormation-bill-improved/ansible/cf-pdxc-fw-demo.retry
+
+2018-02-19 01:37:34,289 p=4573 u=wtooles |  PLAY RECAP ***************************************************************************************************************************
+2018-02-19 01:37:34,290 p=4573 u=wtooles |  localhost                  : ok=0    changed=0    unreachable=0    failed=1   
+2018-02-19 01:42:30,690 p=4780 u=wtooles |  PLAY [Test Cloudformation Ansible Playbook] ******************************************************************************************
+2018-02-19 01:42:30,715 p=4780 u=wtooles |  TASK [launch ansible cloudformation example] *****************************************************************************************
+2018-02-19 01:47:56,631 p=4780 u=wtooles |  changed: [localhost]
+2018-02-19 01:47:56,634 p=4780 u=wtooles |  PLAY RECAP ***************************************************************************************************************************
+2018-02-19 01:47:56,634 p=4780 u=wtooles |  localhost                  : ok=1    changed=1    unreachable=0    failed=0   
+2018-02-19 01:49:03,423 p=4866 u=wtooles |  PLAY [Test Cloudformation Ansible Playbook] ******************************************************************************************
+2018-02-19 01:49:03,447 p=4866 u=wtooles |  TASK [launch ansible cloudformation example] *****************************************************************************************
+2018-02-19 02:01:57,918 p=4866 u=wtooles |  changed: [localhost]
+2018-02-19 02:01:57,920 p=4866 u=wtooles |  PLAY RECAP ***************************************************************************************************************************
+2018-02-19 02:01:57,921 p=4866 u=wtooles |  localhost                  : ok=1    changed=1    unreachable=0    failed=0   
+2018-02-19 02:24:55,460 p=6665 u=wtooles |  PLAY [Test Cloudformation Ansible Playbook] ******************************************************************************************
+2018-02-19 02:24:55,485 p=6665 u=wtooles |  TASK [launch ansible cloudformation example] *****************************************************************************************
+2018-02-19 02:33:22,653 p=6665 u=wtooles |  changed: [localhost]
+2018-02-19 02:33:22,658 p=6665 u=wtooles |  PLAY RECAP ***************************************************************************************************************************
+2018-02-19 02:33:22,660 p=6665 u=wtooles |  localhost                  : ok=1    changed=1    unreachable=0    failed=0   
